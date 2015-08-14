@@ -36,6 +36,7 @@ function NavBar() {
     var $desktopMenuEntries = $("#menu").find("a");
     var $scrollMenuProgress = $(".menuScrollProgress");
     var $header = $("#header");
+    var self = this;
 
     this.init = function(scrollTop, windowHeight) {
         $(".menuScrollProgress").removeClass("hidden");
@@ -81,7 +82,10 @@ function NavBar() {
     }
 
     function onMenuItemClicked() {
-        $('html,body').animate({scrollTop: $($(this).attr("href")).offset().top}, 1000, "easeOutQuart");
+        scrollOffset = $($(this).attr("href")).offset().top;
+        self.color(scrollOffset);
+        self.selectGoodMenuEntry(scrollOffset, $(window).height(), true);
+        $('html,body').animate({scrollTop: scrollOffset}, 1000, "easeOutQuart");
         return false;
     }
 }

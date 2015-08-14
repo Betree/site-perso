@@ -1,5 +1,5 @@
 /*
-** Made by Benjamin Piouffle on 20/02/2015
+** Created by Benjamin Piouffle on 20/02/2015
 ** For use on benjaminpiouffle.com
 */
 
@@ -89,16 +89,21 @@ h4 {
     padding-top: 2px;
 	position: fixed;
 	z-index: 1000;
-    -webkit-transition: background-color 0.5s, box-shadow 0.5s;
-    -moz-transition: background-color 0.5s, box-shadow 0.5s;
-    -ms-transition: background-color 0.5s, box-shadow 0.5s;
-    -o-transition: background-color 0.5s, box-shadow 0.5s;
-    transition: background-color 0.5s, box-shadow 0.5s;
+    -webkit-transition: background-color 0.75s, box-shadow 0.75s;
+    -moz-transition: background-color 0.75s, box-shadow 0.75s;
+    -ms-transition: background-color 0.75s, box-shadow 0.75s;
+    -o-transition: background-color 0.75s, box-shadow 0.75s;
+    transition: background-color 0.75s, box-shadow 0.75s;
 }
 
 #header.fixed {
     background-color: rgb(72, 100, 139);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    -webkit-transition: background-color 0.5s, box-shadow 0.5s;
+    -moz-transition: background-color 0.5s, box-shadow 0.5s;
+    -ms-transition: background-color 0.5s, box-shadow 0.5s;
+    -o-transition: background-color 0.5s, box-shadow 0.5s;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 #sendmailresult {
@@ -435,7 +440,3 @@ h4 {
     max-width: 403px;
     width: 42%;
 }
-
-/*
-** TODO: Parallax
-*/
