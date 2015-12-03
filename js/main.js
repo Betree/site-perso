@@ -1,33 +1,3 @@
-function ContactForm() {
-    var $emailFormContainer = $("#emailFormContainer");
-    var $formTitle = $("#slide6").find("h2");
-    var $contactFormButton = $("#contactFormButton");
-
-    this.init = function() {
-        $contactFormButton.click(expandForm);
-
-        $("#sendmailresult").find(".btnClose").click(function() { $("#sendmailresult").remove(); });
-
-        if ($('#sendmailresult.success').length) {
-            setTimeout(function () { $('#sendmailresult.success').slideUp() }, 3000);
-        } else if ($('#sendmailresult.error').length && $emailFormContainer.hasClass("hidden") == true) {
-            $contactFormButton.click();
-        }
-    }
-
-    function expandForm() {
-        $(this).find("img").toggle();
-        $emailFormContainer.slideToggle(400, "easeOutExpo", function () {
-            if ($emailFormContainer.is(":visible")) {
-                $('html,body').animate({scrollTop: $formTitle.offset().top}, 600, "easeOutQuint", 500, function () {
-                    $("#slide6").find("input:first").focus();
-                });
-            };
-        });
-        return false;
-    }
-}
-
 function NavBar() {
     var MENU_CHANGE_MARGIN = 100;
     var titlesOffsets = [];
@@ -109,9 +79,7 @@ $(document).ready(function() {
     var windowHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
     var navBar = new NavBar();
-    var contactForm = new ContactForm();
 
-    contactForm.init();
     navBar.init(scrollTop, windowHeight);
 
     // Scroll monitor
