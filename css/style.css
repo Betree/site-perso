@@ -3,67 +3,71 @@
 ** For use on benjaminpiouffle.com
 */
 
-body{
-	margin: 0;
-	padding: 0;
-	width: 100%;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     min-width: 180px;
 }
 
 h1 {
-    font-family:"Arvo";
-	font-weight:normal;
-	font-size: 55px;
-	text-align: center;
-	color: #fff;
-	margin: 0;
-	padding: 0;
+    font-family: "Arvo", "Arial", serif;
+    font-weight: normal;
+    font-size: 55px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
-   font-family:"Arvo";
-   font-weight: normal;
-   font-size: 40px;
-   text-align: center;
-   color: #fff;
-    margin: 0px 0px 50px 0px;
+    font-family: "Arvo", "Arial", serif;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 50px 0;
     padding: 0;
 }
 
 h3 {
-   font-family: Oswald;
-   font-weight: normal;
-   font-size: 25px;
-   text-align: center;
-   margin: 5px 0;
-	padding: 0;
-	z-index: 1;
-	position: relative;
+    font-family: Oswald, "Arial", serif;
+    font-weight: normal;
+    font-size: 25px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
 }
 
 h4 {
-   font-family: Oswald;
-   font-weight: normal;
-   font-size: 16px;
-   text-align: center;
-   margin: 5px 0;
-	padding: 0;
-	z-index: 1;
-	position: relative;
+    font-family: Oswald, "Arial", serif;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
 }
 
-.content { margin: 0 auto; width: 960px; }
+.content {
+    margin: 0 auto;
+    width: 960px;
+}
 
-.hidden { display: none; }
+.hidden {
+    display: none;
+}
 
 .btn {
     font-family: inherit;
     font-size: 100%;
     padding: .5em 1em;
     color: #444;
-    color: rgba(0,0,0,.8);
+    color: rgba(0, 0, 0, .8);
     border: 1px solid #999;
-    border: 0 rgba(0,0,0,0);
     background-color: #E6E6E6;
     text-decoration: none;
     border-radius: 2px;
@@ -83,12 +87,12 @@ h4 {
 --------------------------------------------------------*/
 
 #header {
-	width: 100%;
-	background: rgba(72, 100, 139, 0);
-	height: 78px;
+    width: 100%;
+    background: rgba(72, 100, 139, 0);
+    height: 78px;
     padding-top: 2px;
-	position: fixed;
-	z-index: 1000;
+    position: fixed;
+    z-index: 1000;
     -webkit-transition: background-color 0.75s, box-shadow 0.75s;
     -moz-transition: background-color 0.75s, box-shadow 0.75s;
     -ms-transition: background-color 0.75s, box-shadow 0.75s;
@@ -146,20 +150,33 @@ h4 {
     float: right;
 }
 
-#nav { height: 100%; }
+#nav {
+    height: 100%;
+}
 
 #responsiveMenuContainer {
     display: none;
 }
 
-#logo h1 { color: #fff; text-decoration: none; float: left; font-size: 30px; margin-top: 20px; color: #fff; font-family:"Wellfleet"; font-weight: bold; text-shadow: 0 1px 2px #373737; }
+#logo h1 {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    font-size: 30px;
+    margin-top: 20px;
+    font-family: "Wellfleet", serif;
+    font-weight: bold;
+    text-shadow: 0 1px 2px #373737;
+}
 
-#logo #profilePicture {margin-top: 8px; margin-right: 10px;}
+#logo #profilePicture {
+    margin-top: 8px;
+    margin-right: 10px;
+}
 
-#nav ul{
-	list-style: none;
-	display: block;
-	list-style: none;
+#nav ul {
+    list-style: none;
+    display: block;
     padding: 0;
     margin-top: 19px;
 }
@@ -169,8 +186,8 @@ h4 {
 }
 
 #nav li {
-	margin-top: 9px;
-	float: left;
+    margin-top: 9px;
+    float: left;
 }
 
 #menu li:not(:first-child) {
@@ -193,24 +210,38 @@ h4 {
     border: 1px solid lightgrey;
 }
 
-#nav li a { color: #fff; opacity:0.6; font-size: 16px; text-decoration: none; font-family: 'Wellfleet'; }
-#nav li a.active { color: #fff; opacity:1; }
-#nav li a:hover { color: #fff; opacity:1;  }
+#nav li a {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Wellfleet', serif;
+}
+
+#nav li a.active {
+    color: #fff;
+    opacity: 1;
+}
+
+#nav li a:hover {
+    color: #fff;
+    opacity: 1;
+}
 
 .description {
- font-family: 'Goudy Bookletter 1911', serif;
-   font-weight: normal;
-   font-size: 30px;
-  text-align: left;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: left;
 }
 
 .slide .experienceBlock:not(:last-child) {
-	margin-bottom: 20px;
-	border-bottom: 1px solid rgb(161, 161, 161);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(161, 161, 161);
 }
 
 .experienceBlock .experienceLogo {
-	float: right;
+    float: right;
     max-width: 100%;
 }
 
@@ -266,24 +297,24 @@ h4 {
     color: #fff;
 }
 
-#slide4{
+#slide4 {
     background-color: #fff;
     color: #333333;
 }
 
 #slide4 .description {
-	text-align: center;
+    text-align: center;
 }
 
 #slide4 .skillLogo {
-	height:75px;
+    height: 75px;
 }
 
 #slide5 {
-	background: url("../img/slide5.jpg") 50% 0 no-repeat fixed;
-	margin: 0 auto;
-	color: white;
-	background-size: cover;
+    background: url("../img/slide5.jpg") 50% 0 no-repeat fixed;
+    margin: 0 auto;
+    color: white;
+    background-size: cover;
 }
 
 #slide5 .col {
@@ -309,11 +340,11 @@ h4 {
 }
 
 #slide6 .description_container {
-	text-align: center;
+    text-align: center;
 }
 
 #slide6 .contactIcon {
-	margin: 5px;
+    margin: 5px;
     height: 13%;
     width: 13%;
     min-height: 100px;
@@ -321,78 +352,98 @@ h4 {
 }
 
 .row img {
-	margin: 0px 5px 0px 5px;
+    margin: 0 5px 0 5px;
 }
 
 .col {
-	display: inline-block;
-	margin: 0px 15px 0px 15px;
-	vertical-align: top;
+    display: inline-block;
+    margin: 0 15px 0 15px;
+    vertical-align: top;
 }
 
 .col p {
-	font-size: 24px;
-	margin-top: 0px;
+    font-size: 24px;
+    margin-top: 0;
 }
 
 #slide5 p {
-	font-size: 24px;
-	margin-top: 0px;
+    font-size: 24px;
+    margin-top: 0;
 }
 
 .col h4 {
-	margin-bottom: 10px;
-	border-bottom: 1px solid rgb(161, 161, 161);;
-	padding: 0px 7px 5px 7px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(161, 161, 161);;
+    padding: 0 7px 5px 7px;
 }
 
 @-webkit-keyframes focus {
-	0% { -webkit-transform: scale(1.05); }
-	50% { -webkit-transform: scale(1.1); }
-	100% { -webkit-transform: scale(1.05); }
+    0% {
+        -webkit-transform: scale(1.05);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1.05);
+    }
 }
+
 @-moz-keyframes focus {
-    0% { -moz-transform: (1.05); }
-    50% { -moz-transform: (1.1); }
-    100% { -moz-transform: (1.05); }
+    0% {
+        -moz-transform: scale(1.05);
+    }
+    50% {
+        -moz-transform: scale(1.1);
+    }
+    100% {
+        -moz-transform: scale(1.05);
+    }
 }
+
 @keyframes focus {
-    0% { transform: scale(1.05); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1.05); }
+    0% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 #slide6 .contactIcon:hover {
-	-webkit-animation-name: focus;
-	-webkit-animation-duration: 1000ms;
-	-webkit-transform-origin:50% 50%;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
+    -webkit-animation-name: focus;
+    -webkit-animation-duration: 1000ms;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
 
     animation-name: focus;
     animation-duration: 1000ms;
-    transform-origin:50% 50%;
+    transform-origin: 50% 50%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
-      moz-animation-name: focus;
-      moz-animation-duration: 1000ms;
-      moz-transform-origin:50% 50%;
-      moz-animation-iteration-count: infinite;
-      moz-animation-timing-function: linear;
+    moz-animation-name: focus;
+    moz-animation-duration: 1000ms;
+    moz-transform-origin: 50% 50%;
+    moz-animation-iteration-count: infinite;
+    moz-animation-timing-function: linear;
 }
 
-#emailFormContainer  {
-	box-shadow: 0px 0px 34px 6px rgb(205, 205, 205) inset;
+#emailFormContainer {
+    box-shadow: 0 0 34px 6px rgb(205, 205, 205) inset;
     border-radius: 12px;
-	margin-bottom: 7px;
-	padding: 50px;
-	text-align: left;
+    margin-bottom: 7px;
+    padding: 50px;
+    text-align: left;
 }
 
 #emailFormContainer input, #emailFormContainer textarea {
     font-size: 22px;
-    padding: 10px 0px 10px 1%;
+    padding: 10px 0 10px 1%;
     max-width: 99%;
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px #ddd;
@@ -412,13 +463,13 @@ h4 {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    box-shadow: rgba(0,0,0,1) 0 1px 0;
-    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
     color: white;
     font-size: 23px;
-    font-family: "Arvo";
+    font-family: "Arvo", serif;
     text-decoration: none;
     cursor: pointer;
     vertical-align: top;
@@ -426,14 +477,15 @@ h4 {
 }
 
 #emailFormContainer button[type=submit]:hover {
-	   border-top-color: #28597a;
-	   background: #28597a;
-	   color: #ccc;
-   }
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
 #emailFormContainer button[type=submit]:active {
-	   border-top-color: #1b435e;
-	   background: #1b435e;
-   }
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
 
 #emailFormContainer input[type=email] {
     margin-bottom: 5px;
