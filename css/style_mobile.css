@@ -34,16 +34,6 @@
     #slide5 .col {
         width: 93%;
     }
-
-    #emailFormContainer button[type=submit] {
-        width: 100%;
-    }
-
-    #emailFormContainer input[type=email] {
-        margin-bottom: 5px;
-        max-width: 1030px;
-        width: 98.7%;
-    }
 }
 
 @media all and (max-width: 495px) {
