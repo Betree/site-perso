@@ -1,0 +1,282 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}
+    %meta{:content => "true", :name => "HandheldFriendly"}
+    %title Benjamin Piouffle
+    -# CSS
+    %link{:href => "css/slicknav.css", :rel => "stylesheet"}
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+    %link{:href => "css/style_mobile.css", :rel => "stylesheet"}
+    -# Fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Wellfleet", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Arvo", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Oswald", :rel => "stylesheet", :type => "text/css"}
+    -# Favicons
+    %link{:href => "img/favicon/apple-icon-57x57.png", :rel => "apple-touch-icon", :sizes => "57x57"}
+    %link{:href => "img/favicon/apple-icon-60x60.png", :rel => "apple-touch-icon", :sizes => "60x60"}
+    %link{:href => "img/favicon/apple-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}
+    %link{:href => "img/favicon/apple-icon-76x76.png", :rel => "apple-touch-icon", :sizes => "76x76"}
+    %link{:href => "img/favicon/apple-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}
+    %link{:href => "img/favicon/apple-icon-120x120.png", :rel => "apple-touch-icon", :sizes => "120x120"}
+    %link{:href => "img/favicon/apple-icon-144x144.png", :rel => "apple-touch-icon", :sizes => "144x144"}
+    %link{:href => "img/favicon/apple-icon-152x152.png", :rel => "apple-touch-icon", :sizes => "152x152"}
+    %link{:href => "img/favicon/apple-icon-180x180.png", :rel => "apple-touch-icon", :sizes => "180x180"}
+    %link{:href => "img/favicon/android-icon-192x192.png", :rel => "icon", :sizes => "192x192", :type => "image/png"}
+    %link{:href => "/img/favicon/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}
+    %link{:href => "img/favicon/favicon-96x96.png", :rel => "icon", :sizes => "96x96", :type => "image/png"}
+    %link{:href => "img/favicon/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}
+    %meta{:content => "#ffffff", :name => "msapplication-TileColor"}
+    %meta{:content => "img/favicon/ms-icon-144x144.png", :name => "msapplication-TileImage"}
+    %meta{:content => "#ffffff", :name => "theme-color"}
+  %body
+    %header#header.fixed.noselect
+      .content
+        #logo
+          %a{:href => "#slide1"}
+            %img#profilePicture{:align => "left", :src => "img/me.png"}
+            %h1 Benjamin Piouffle
+        #navContainer
+          %nav#nav
+            %ul#menu
+              %li
+                %a{:href => "#slide1"} About me
+              %li
+                %a{:href => "#slide2"} Education
+              %li
+                %a{:href => "#slide3"} Work
+              %li
+                %a{:href => "#slide4"} Skills
+              %li
+                %a{:href => "#slide5"} Interests
+              %li
+                %a{:href => "#slide6"} Contact
+          #menuScrollProgress.hidden
+          #responsiveMenuContainer
+    .parallax
+      #slide1.slide
+        .content
+          %h2 About me
+          %p.description{:itemscope => "", :itemtype => "http://data-vocabulary.org/Person"}<
+            %span>My name is&nbsp
+            %span{:itemprop => "name"}< Benjamin Piouffle
+            %span>. I'm a French student about to graduate at the French school&nbsp
+            %span{:itemprop => "affiliation"}<
+              %b Epitech
+            %span>. I studied computer science for three years at&nbsp
+            %b Epitech in Marseille (France)
+            %span>, one year at
+            %span{:itemprop => "affiliation"}
+              %b
+                California State University of
+                %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+                  %span{:itemprop => "locality"} Long Beach
+                  (USA)
+            %span>and I'm currently living in Paris for my final year.
+            %br
+            %br>
+            %span>I have also worked as a&nbsp
+            %span{:itemprop => "title"} developer
+            %span>for three IT companies along with my studies for almost two years.
+            %br
+            %br
+            %span>Programming is my job but also one of my passions !
+      #slide2.slide
+        .content
+          %h2{:style => "color:black;"} Education
+          .description_container
+            .description
+              .experienceBlock
+                %img.experienceLogo{:src => "img/logo_csulb.png"}
+                .experienceTitle
+                  %span.timePeriod October 2014 – Present
+                  %br
+                  %b California State University of Long Beach
+                  (USA)
+                %p
+                  First semester: English
+                  %br
+                  Second semester: Security, Java, Operating Systems, Web Design
+              .experienceBlock
+                %img.experienceLogo{:src => "img/logo_epitech.jpg"}
+                .experienceTitle
+                  %span.timePeriod October 2011 – June 2014
+                  %br
+                  %b Epitech Marseille
+                  (France)
+                %p
+                  First year: C, UNIX Systems, Security, SQL
+                  %br
+                  Second year: C++, Assembler, Web Security, Network
+                  %br
+                  Third year: Advanced C++, Java, Business Science
+                  %br
+              .experienceBlock
+                .experienceTitle
+                  %span.timePeriod July 2011
+                  %br
+                  %b Baccalauréat (French A level) with Honors
+      #slide3.slide
+        .content
+          %h2 Work
+          .description
+            .experienceBlock
+              .experienceTitle
+                %span.timePeriod> September 2013 – June 2014
+                \:
+                %b Numvision
+                – Java/J2EE Developer
+              %p
+                Numvision is a company located in south of France that provide file backup and synchronisation solutions for companies.
+                My work mainly consisted of improving the main company's product “Numsync”, creating a REST API
+                and automatizing the build of mobile applications.
+                %br>
+                Main technologies : Java / J2EE, REST API, Android / IOS builds
+            .experienceBlock
+              .experienceTitle
+                %span.timePeriod> July 2012 – December 2012
+                \:
+                %b E­Frogg
+                – Web Developer Internship
+              %p
+                Internship at E­Frogg, a web agency. Development of a SEO analysis tool and work on various websites.
+                %br>
+                Main technologies : HTML, Javascript, JQuery, PHP, MySQL
+            %div{:style => "text-align:center;"}
+              %button#btnExpandWorkExperiences.btn Show more work experience (Non IT related)
+            #secondaryExperiences{:style => "display:none;"}
+              .experienceBlock
+                .experienceTitle
+                  %span.timePeriod> August 2011 – September 2011
+                  \:
+                  %b Sanary­ City Hall
+                  – Summer job
+                %p
+              .experienceBlock
+                .experienceTitle
+                  %span.timePeriod> January 2009 – May 2009
+                  \:
+                  %b Independent
+                %p Computer lessons for individuals
+              .experienceBlock
+                .experienceTitle
+                  %span.timePeriod> July – August 2008
+                  \:
+                  %b Mistral Diesel
+                  – Inventory assistant
+                %p
+      #slide4.slide
+        .content
+          %h2{:style => "color:black;"} Skills
+          .description
+            %h3 Technologies
+            %hr
+            .col
+              %h4 Software programming
+              .row
+                .skillText C
+                .skillText C++
+                %img.skillLogo{:alt => "Java / J2EE", :height => "75px", :src => "img/icons_skills/java.svg", :title => "Java / J2EE"}
+                %img.skillLogo{:alt => "Arduino", :height => "75px", :src => "img/icons_skills/arduino.png", :title => "Arduino"}
+            .col
+              %h4 Scripting
+              .row
+                .skillText Shell script
+                %img.skillLogo{:alt => "Python", :height => "75px", :src => "img/icons_skills/python.svg", :title => "Python"}
+            .col
+              %h4 Databases
+              .row
+                %img.skillLogo{:alt => "MySQL", :height => "75px", :src => "img/icons_skills/mysql.svg", :title => "MySQL"}
+                %img.skillLogo{:alt => "PostgreSQL", :height => "75px", :src => "img/icons_skills/postgresql.svg", :title => "PostgreSQL"}
+            .col
+              %h4 Web programming
+              .row
+                %img.skillLogo{:alt => "Ruby On Rails", :height => "75px", :src => "img/icons_skills/ruby-on-rails.png", :title => "Ruby On Rails"}
+                %img.skillLogo{:alt => "PHP", :height => "75px", :src => "img/icons_skills/php.svg", :title => "PHP"}
+                %img.skillLogo{:alt => "HTML5", :height => "75px", :src => "img/icons_skills/html5.svg", :title => "HTML5"}
+                %img.skillLogo{:alt => "Javascript", :height => "75px", :src => "img/icons_skills/javascript.svg", :title => "Javascript"}
+                %img.skillLogo{:alt => "Coffeescript", :height => "75px", :src => "img/icons_skills/coffeescript.png", :title => "Coffeescript"}
+                %img.skillLogo{:alt => "JQuery", :height => "75px", :src => "img/icons_skills/jquery.svg", :title => "JQuery"}
+            .col
+              %h4 Operating systems
+              .row
+                %img.skillLogo{:alt => "GNU/Linux", :height => "75px", :src => "img/icons_skills/gnulinux.png", :title => "GNU/Linux"}
+                %img.skillLogo{:alt => "Windows", :height => "75px", :src => "img/icons_skills/windows.png", :title => "Windows"}
+                %img.skillLogo{:alt => "Android", :height => "75px", :src => "img/icons_skills/android.jpg", :title => "Android"}
+            .col
+              %h4 Tools
+              .row
+                %img.skillLogo{:alt => "Git", :height => "75px", :src => "img/icons_skills/git.png", :title => "Git"}
+                %img.skillLogo{:alt => "SVN", :height => "75px", :src => "img/icons_skills/svn.png", :title => "SVN"}
+                %img.skillLogo{:alt => "Bitcoin", :height => "75px", :src => "img/icons_skills/bitcoin.png", :title => "Bitcoin"}
+            .col
+              %h4 Others
+              .row
+                .skillText Restful APIs
+                .skillText Agile software development
+            %br
+            %br
+            %h3 Languages
+            %hr
+            .col
+              .row
+                .skillText French (native)
+                .skillText English (fluent) - TOEFL score : 89
+                .skillText Italian (basic)
+      #slide5.slide
+        .content
+          %h2 Interests
+          .description_container
+            .description
+              %h3 Music
+              %hr
+              .col
+                %h4 Guitar
+                %p
+                  I've been playing guitar for 8 years. My favorite thing is to improvise and my tastes being quite open, I could play with almost everything.
+                  %br
+                  I also sometimes try to record songs that I put on
+                  = succeed "." do
+                    %a{:href => "https://soundcloud.com/betree"} soundcloud
+              .col
+                %h4 Saxophone
+                %p I played saxophone during 2 years when I was younger and I recently tried to get back to it. However I couldn't take it with me on the plane and can't wait to find it back when I'll come home.
+              %h3 Sport
+              %hr
+              %p Hikking, trekking, bicycling
+              %h3 Others
+              %hr
+              %p Travelling, motorcycling
+      #slide6.slide
+        .content
+          %h2{:style => "color:black;"} Contact
+          .description_container
+            .row
+              %a#contactFormButton{:href => "mailto:contact@benjaminpiouffle.com"}<
+                %img.contactIcon{:alt => "Email", :src => "img/icons_social/mail.png", :title => "Email"}
+                %img#contactIconExtension{:alt => "Email", :src => "img/icons_social/mailextended.png", :style => "display: none; margin-bottom: -4px;", :title => "Email"}
+            .row
+              %a{:href => "http://stackoverflow.com/users/3584587/betree", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Stackoverflow", :src => "img/icons_social/stackoverflow.png", :title => "Stackoverflow"}
+              %a.hi-icon.hi-icon-effect-8{:href => "https://github.com/Betree", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Github", :src => "img/icons_social/github.png", :title => "Github"}
+              %a{:href => "https://www.linkedin.com/in/benjaminpiouffle", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Linkedin", :src => "img/icons_social/linkedin.png", :title => "Linkedin"}
+            .row
+              %a{:href => "https://plus.google.com/+BenjaminPiouffle", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Google+", :src => "img/icons_social/googleplus.png", :title => "Google+"}
+              %a{:href => "https://www.facebook.com/benjamin.piouffle", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Facebook", :src => "img/icons_social/facebook.png", :title => "Facebook"}
+              %a{:href => "https://twitter.com/Betree83", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Twitter", :src => "img/icons_social/twitter.png", :title => "Twitter"}
+            .row
+              %a{:href => "http://www.lastfm.fr/user/Betree83", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "LastFM", :src => "img/icons_social/lastfm.png", :title => "LastFM"}
+              %a{:href => "https://soundcloud.com/betree", :target => "_BLANK"}<
+                %img.contactIcon{:alt => "Soundcloud", :src => "img/icons_social/soundcloud.png", :title => "Soundcloud"}
+      %script{:src => "js/jquery-2.1.3.min.js", :type => "text/javascript"}
+      %script{:src => "js/jquery.slicknav.min.js", :type => "text/javascript"}
+      %script{:src => "js/jquery.easing.1.3.js", :type => "text/javascript"}
+      %script{:src => "js/main.js", :type => "text/javascript"}
