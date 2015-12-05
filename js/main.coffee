@@ -23,6 +23,7 @@ class NavBar
     @isFixed = @$header.hasClass('fixed')
     @progressBar = $('#menuScrollProgress')
     @progressBar.removeClass 'hidden'
+    @currentMenuLink = null
 
     # Build menu entries and activate click on them
     @buildMenuLinks()
@@ -53,8 +54,12 @@ class NavBar
 
   updateProgressBar: (scrollPosition) ->
     menuLink = @getCurrentMenuLink(scrollPosition)
-    @progressBar.css('left', menuLink.offsetLeft)
-    @progressBar.css('width', menuLink.width)
+    if @currentMenuLink != menuLink
+      @currentMenuLink = menuLink
+      @progressBar.css('left', menuLink.offsetLeft)
+      @progressBar.css('width', menuLink.width)
+      $('#menu a').removeClass('active')
+      menuLink.setActive()
 
   getCurrentMenuLink: (scrollPosition) ->
     for menuLink in @menuLinks by -1
@@ -71,12 +76,12 @@ class MenuLink
   updateTargetOffsetTop: ->
     @targetOffsetTop = $(@$this.attr('href')).offset().top
 
+  setActive: =>
+    @$this.addClass('active')
+
   activateClick: () ->
     @$this.click (e) =>
-      $link = $(e.currentTarget)
-      scrollOffset = $($link.attr('href')).offset().top
+      scrollOffset = $($(e.currentTarget).attr('href')).offset().top
       $('html,body').animate {scrollTop: scrollOffset}, 1000, 'easeOutQuart'
-      $('#menu a').removeClass('active')
-      $link.addClass('active')
       false
 

@@ -28,6 +28,7 @@
       this.isFixed = this.$header.hasClass('fixed');
       this.progressBar = $('#menuScrollProgress');
       this.progressBar.removeClass('hidden');
+      this.currentMenuLink = null;
       this.buildMenuLinks();
       ref = this.menuLinks;
       for (i = 0, len = ref.length; i < len; i++) {
@@ -79,8 +80,13 @@
     NavBar.prototype.updateProgressBar = function(scrollPosition) {
       var menuLink;
       menuLink = this.getCurrentMenuLink(scrollPosition);
-      this.progressBar.css('left', menuLink.offsetLeft);
-      return this.progressBar.css('width', menuLink.width);
+      if (this.currentMenuLink !== menuLink) {
+        this.currentMenuLink = menuLink;
+        this.progressBar.css('left', menuLink.offsetLeft);
+        this.progressBar.css('width', menuLink.width);
+        $('#menu a').removeClass('active');
+        return menuLink.setActive();
+      }
     };
 
     NavBar.prototype.getCurrentMenuLink = function(scrollPosition) {
@@ -102,6 +108,7 @@
     function MenuLink($link, linkNum, offsetLeft) {
       this.linkNum = linkNum;
       this.offsetLeft = offsetLeft;
+      this.setActive = bind(this.setActive, this);
       this.$this = $link;
       this.width = $link.width();
       this.targetOffsetTop = $(this.$this.attr('href')).offset().top;
@@ -111,17 +118,18 @@
       return this.targetOffsetTop = $(this.$this.attr('href')).offset().top;
     };
 
+    MenuLink.prototype.setActive = function() {
+      return this.$this.addClass('active');
+    };
+
     MenuLink.prototype.activateClick = function() {
       return this.$this.click((function(_this) {
         return function(e) {
-          var $link, scrollOffset;
-          $link = $(e.currentTarget);
-          scrollOffset = $($link.attr('href')).offset().top;
+          var scrollOffset;
+          scrollOffset = $($(e.currentTarget).attr('href')).offset().top;
           $('html,body').animate({
             scrollTop: scrollOffset
           }, 1000, 'easeOutQuart');
-          $('#menu a').removeClass('active');
-          $link.addClass('active');
           return false;
         };
       })(this));
