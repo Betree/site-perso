@@ -29,6 +29,9 @@
       this.progressBar = $('#menuScrollProgress');
       this.progressBar.removeClass('hidden');
       this.currentMenuLink = null;
+      $('#menu').slicknav({
+        prependTo: '#responsiveMenuContainer'
+      });
       this.buildMenuLinks();
       ref = this.menuLinks;
       for (i = 0, len = ref.length; i < len; i++) {
