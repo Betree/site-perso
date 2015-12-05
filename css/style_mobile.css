@@ -3,7 +3,7 @@
 ** For use on benjaminpiouffle.com
 */
 
-@media all and (max-width: 1030px) {
+@media all and (max-width: 1023px) {
     .content {
         width: 80%;
     }
@@ -36,7 +36,7 @@
     }
 }
 
-@media all and (max-width: 495px) {
+@media all and (max-width: 1023px) {
     #logo #profilePicture {
         margin-top: 10px;
         height: 55px;
@@ -78,7 +78,7 @@
     }
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 1023px) {
     .slicknav_menu {
         position: fixed;
         top: 70px;

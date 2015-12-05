@@ -24,7 +24,7 @@ class NavBar
     @progressBar = $('#menuScrollProgress')
     @progressBar.removeClass 'hidden'
     @currentMenuLink = null
-    $('#menu').slicknav({prependTo:'#responsiveMenuContainer'});
+    $('#menu').slicknav({prependTo:'#responsiveMenuContainer', closeOnClick: true});
 
     # Build menu entries and activate click on them
     @buildMenuLinks()

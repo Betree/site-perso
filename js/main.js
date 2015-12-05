@@ -30,7 +30,8 @@
       this.progressBar.removeClass('hidden');
       this.currentMenuLink = null;
       $('#menu').slicknav({
-        prependTo: '#responsiveMenuContainer'
+        prependTo: '#responsiveMenuContainer',
+        closeOnClick: true
       });
       this.buildMenuLinks();
       ref = this.menuLinks;
