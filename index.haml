@@ -50,9 +50,11 @@
               %li
                 %a{:href => "#slide4"} Skills
               %li
-                %a{:href => "#slide5"} Interests
+                %a{:href => "#slide5"} Projects
               %li
-                %a{:href => "#slide6"} Contact
+                %a{:href => "#slide6"} Interests
+              %li
+                %a{:href => "#slide7"} Contact
           #menuScrollProgress.hidden
           #responsiveMenuContainer
     .parallax
@@ -233,6 +235,31 @@
                 .skillText Italian (basic)
       #slide5.slide
         .content
+          %h2 Projects
+          .project.description
+            %h3
+              %a{href: 'http://edzafilms.com'}Edzafilms.com
+            %p
+              A website to present “Edza Films”, a french audio-visual association made of film directors, sound
+              engineers cameramen and other really nice people I was happy to work with.
+              The team can upload pictures, videos, post news and manage a lot of content directly from the website.
+              %br
+              %br
+              Technologies : Ruby on Rails, HAML, SASS
+            %img{src: '/img/projects/edzafilms/home_page.png', width: '500'}
+            %img{src: '/img/projects/edzafilms/prestations_page.png', width: '500'}
+            %img{src: '/img/projects/edzafilms/contact_page.png', width: '500'}
+          .project.description
+            %h3
+              %a{href: 'https://github.com/Betree/magicblue'}Magic Blue bulb unofficial API
+            %p
+              Python script and library to control Magic Blue bulbs over Bluetooth. These are probably the cheapest RGB
+              light bulbs you can find on the market but no API exists and they're not documented anywhere.
+              %br
+              This open-source project consist of the reverse engineering work to bring all the features
+              from the official mobile application in some easy to use and well documented Python scripts.
+      #slide6.slide
+        .content
           %h2 Interests
           .description_container
             .description
@@ -255,7 +282,7 @@
               %h3 Others
               %hr
               %p Travelling, motorcycling
-      #slide6.slide
+      #slide7.slide
         .content
           %h2{:style => "color:black;"} Contact
           .description_container

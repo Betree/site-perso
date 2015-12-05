@@ -31,7 +31,7 @@
         display: block;
     }
 
-    #slide5 .col {
+    #slide6 .col {
         width: 93%;
     }
 }
@@ -73,7 +73,7 @@
         font-size: 20px;
     }
 
-    #slide5 .col {
+    #slide6 .col {
         width: 90%;
     }
 }
@@ -93,13 +93,13 @@
         background-color: rgb(72, 100, 139);
     }
 
-    #slide5 .col {
+    #slide6 .col {
         width: 88%;
     }
 }
 
 @media all and (max-width: 230px) {
-    #slide5 .col {
+    #slide6 .col {
         width: 80%;
     }
 

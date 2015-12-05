@@ -241,14 +241,14 @@ h4 {
 
 #slide1 {
     background: url('../img/slide1.jpg') 50% 0 no-repeat fixed;
-    color: #fff;
+    color: whitesmoke;
     margin: 0;
     background-size: cover;
     min-height: 100vh;
 }
 
 #slide2 {
-    background-color: #fff;
+    background-color: whitesmoke;
     color: #333333;
     margin: 0 auto;
     overflow: hidden;
@@ -257,11 +257,11 @@ h4 {
 #slide3 {
     background: url("../img/slide3.jpg") 50% 0 no-repeat fixed;
     background-size: cover;
-    color: #fff;
+    color: whitesmoke;
 }
 
 #slide4 {
-    background-color: #fff;
+    background-color: whitesmoke;
     color: #333333;
 }
 
@@ -274,19 +274,51 @@ h4 {
 }
 
 #slide5 {
-    background: url("../img/slide5.jpg") 50% 0 no-repeat fixed;
+    background: #232323;
+    color: whitesmoke;
+}
+
+#slide5 .project {
+    text-align: center;
+    background: #383838;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+#slide5 .project img {
+    width:45%;
+}
+
+#slide5 .project.description p {
+    text-align: left;
+}
+
+#slide5 .project.description h3 a {
+    color: #5A88CA;
+    font-size: 2.5rem;
+    text-shadow: 1px 2px 3px rgba(88, 0, 0, 0.26);
+}
+
+#slide5 .project.description h3 a:hover {
+    color: #9AAECA;
+    text-shadow: 1px 2px 3px #002A67;
+}
+
+#slide6 {
+    background: url("../img/slide6.jpg") 50% 0 no-repeat fixed;
     margin: 0 auto;
     color: white;
     background-size: cover;
 }
 
-#slide5 .col {
+#slide6 .col {
     width: 46%;
 }
 
-#slide6 {
-    background-color: #fff;
-    color: #fff;
+#slide7 {
+    background-color: whitesmoke;
+    color: whitesmoke;
     box-shadow: 0 0 8px white;
 }
 
@@ -302,11 +334,11 @@ h4 {
     margin-bottom: 5px;
 }
 
-#slide6 .description_container {
+#slide7 .description_container {
     text-align: center;
 }
 
-#slide6 .contactIcon {
+#slide7 .contactIcon {
     margin: 5px;
     height: 13%;
     width: 13%;
@@ -329,7 +361,7 @@ h4 {
     margin-top: 0;
 }
 
-#slide5 p {
+#slide6 p {
     font-size: 24px;
     margin-top: 0;
 }
@@ -376,7 +408,7 @@ h4 {
     }
 }
 
-#slide6 .contactIcon:hover {
+#slide7 .contactIcon:hover {
     -webkit-animation-name: focus;
     -webkit-animation-duration: 1000ms;
     -webkit-transform-origin: 50% 50%;
