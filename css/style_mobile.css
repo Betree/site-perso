@@ -53,6 +53,12 @@
     }
 }
 
+@media all and (max-width: 465px) {
+    .description {
+        font-size: 22px;
+    }
+}
+
 @media all and (max-width: 430px) {
     #logo #profilePicture {
         margin-top: 14px;
