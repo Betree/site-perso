@@ -159,14 +159,12 @@ h4 {
     margin-left: 21px;
 }
 
-.menuScrollProgress {
-    position: absolute;
-    width: 0%;
+#menuScrollProgress {
+    position: relative;
+    width: 0;
     height: 3px;
     background-color: white;
     float: left;
-    margin-top: -46px;
-    top: 99px;
     -webkit-transition: width 0.3s, left 0.2s;
     -moz-transition: width 0.3s, left 0.2s;
     -ms-transition: width 0.3s, left 0.2s;
