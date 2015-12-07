@@ -320,6 +320,7 @@ h4 {
     background-color: whitesmoke;
     color: whitesmoke;
     box-shadow: 0 0 8px white;
+    padding-bottom: 1px;
 }
 
 .skillText {
@@ -426,4 +427,14 @@ h4 {
     moz-transform-origin: 50% 50%;
     moz-animation-iteration-count: infinite;
     moz-animation-timing-function: linear;
+}
+
+#contact_text {
+    color: #B7B7B7;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    text-shadow: 0px 0px 0px #A0A0A0;
+    font-family: "Arvo", "Arial", serif;
+    height: 31px;
 }

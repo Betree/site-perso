@@ -15,6 +15,11 @@ $(window).load ->
     $(this).slideUp 400, 'easeOutQuart'
     $('#secondaryExperiences').slideToggle 400, 'easeOutQuart'
 
+  # Show contact name on hover
+  $('.contactIcon').mouseenter ->
+    $('#contact_text').text($(this).attr('alt'))
+  $('.contactIcon').mouseleave ->
+    $('#contact_text').text('')
 
 class NavBar
   constructor: ->

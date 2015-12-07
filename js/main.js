@@ -13,9 +13,15 @@
     $(window).resize(function() {
       return navBar.buildMenuLinks();
     });
-    return $('#btnExpandWorkExperiences').click(function() {
+    $('#btnExpandWorkExperiences').click(function() {
       $(this).slideUp(400, 'easeOutQuart');
       return $('#secondaryExperiences').slideToggle(400, 'easeOutQuart');
+    });
+    $('.contactIcon').mouseenter(function() {
+      return $('#contact_text').text($(this).attr('alt'));
+    });
+    return $('.contactIcon').mouseleave(function() {
+      return $('#contact_text').text('');
     });
   });
 
