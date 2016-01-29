@@ -3,11 +3,13 @@
   var MenuLink, NavBar,
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  $('#contactFormButton.hidden_email').hover(function() {
-    var emailAddress;
-    emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("");
-    $(this).attr('href', "mailto:" + emailAddress);
-    return $(this).removeClass('hidden_email');
+  $(document).ready(function() {
+    return $('#contactFormButton.hidden_email').hover(function() {
+      var emailAddress;
+      emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("");
+      $(this).attr('href', "mailto:" + emailAddress);
+      return $(this).removeClass('hidden_email');
+    });
   });
 
   $(window).load(function() {
