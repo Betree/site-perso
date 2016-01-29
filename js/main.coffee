@@ -1,3 +1,10 @@
+# Add email to mailto: on hover (anti-bot)
+$('#contactFormButton.hidden_email')load ->
+  $(this).hover ->
+    emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("")
+    $(this).attr('href', "mailto:#{emailAddress}")
+    $(this).removeClass('hidden_email')
+
 $(window).load ->
   navBar = new NavBar
   navBar.update($(window).scrollTop())
@@ -23,12 +30,6 @@ $(window).load ->
     $contactText.text($(this).attr('alt'))
   $contactIcon.mouseleave ->
     $contactText.text('')
-
-  # Add email to mailto: on hover (anti-bot)
-  $('#contactFormButton.hidden_email').hover ->
-    emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("")
-    $(this).attr('href', "mailto:#{emailAddress}")
-    $(this).removeClass('hidden_email')
 
 class NavBar
   constructor: ->

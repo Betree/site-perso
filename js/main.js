@@ -3,6 +3,13 @@
   var MenuLink, NavBar,
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
+  $('#contactFormButton.hidden_email').hover(function() {
+    var emailAddress;
+    emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("");
+    $(this).attr('href', "mailto:" + emailAddress);
+    return $(this).removeClass('hidden_email');
+  });
+
   $(window).load(function() {
     var $contactIcon, $contactText, navBar;
     navBar = new NavBar;
@@ -22,14 +29,8 @@
     $contactIcon.mouseenter(function() {
       return $contactText.text($(this).attr('alt'));
     });
-    $contactIcon.mouseleave(function() {
+    return $contactIcon.mouseleave(function() {
       return $contactText.text('');
-    });
-    return $('#contactFormButton.hidden_email').hover(function() {
-      var emailAddress;
-      emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("");
-      $(this).attr('href', "mailto:" + emailAddress);
-      return $(this).removeClass('hidden_email');
     });
   });
 
