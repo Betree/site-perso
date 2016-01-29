@@ -15,11 +15,20 @@ $(window).load ->
     $(this).slideUp 400, 'easeOutQuart'
     $('#secondaryExperiences').slideToggle 400, 'easeOutQuart'
 
-  # Show contact name on hover
-  $('.contactIcon').mouseenter ->
-    $('#contact_text').text($(this).attr('alt'))
-  $('.contactIcon').mouseleave ->
-    $('#contact_text').text('')
+  # Show contact service provider on hover
+  $contactIcon = $('.contactIcon')
+  $contactText = $('#contact_text')
+
+  $contactIcon.mouseenter ->
+    $contactText.text($(this).attr('alt'))
+  $contactIcon.mouseleave ->
+    $contactText.text('')
+
+  # Add email to mailto: on hover (anti-bot)
+  $('#contactFormButton.hidden_email').hover ->
+    emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("")
+    $(this).attr('href', "mailto:#{emailAddress}")
+    $(this).removeClass('hidden_email')
 
 class NavBar
   constructor: ->

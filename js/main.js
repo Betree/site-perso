@@ -4,7 +4,7 @@
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   $(window).load(function() {
-    var navBar;
+    var $contactIcon, $contactText, navBar;
     navBar = new NavBar;
     navBar.update($(window).scrollTop());
     $(window).scroll(function() {
@@ -17,11 +17,19 @@
       $(this).slideUp(400, 'easeOutQuart');
       return $('#secondaryExperiences').slideToggle(400, 'easeOutQuart');
     });
-    $('.contactIcon').mouseenter(function() {
-      return $('#contact_text').text($(this).attr('alt'));
+    $contactIcon = $('.contactIcon');
+    $contactText = $('#contact_text');
+    $contactIcon.mouseenter(function() {
+      return $contactText.text($(this).attr('alt'));
     });
-    return $('.contactIcon').mouseleave(function() {
-      return $('#contact_text').text('');
+    $contactIcon.mouseleave(function() {
+      return $contactText.text('');
+    });
+    return $('#contactFormButton.hidden_email').hover(function() {
+      var emailAddress;
+      emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("");
+      $(this).attr('href', "mailto:" + emailAddress);
+      return $(this).removeClass('hidden_email');
     });
   });
 
@@ -150,5 +158,3 @@
   })();
 
 }).call(this);
-
-//# sourceMappingURL=main.js.map
