@@ -1,21 +1,9 @@
-# Add email to mailto: on hover (anti-bot)
 $(document).ready ->
+  # Add email to mailto: on hover (anti-bot)
   $('#contactFormButton.hidden_email').hover ->
     emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("")
     $(this).attr('href', "mailto:#{emailAddress}")
     $(this).removeClass('hidden_email')
-
-$(window).load ->
-  navBar = new NavBar
-  navBar.update($(window).scrollTop())
-
-  # Scroll monitor
-  $(window).scroll ->
-    navBar.update($(window).scrollTop())
-
-  # Resize monitor
-  $(window).resize ->
-    navBar.buildMenuLinks()
 
   # Expand work experiences button on click
   $('#btnExpandWorkExperiences').click ->
@@ -30,6 +18,20 @@ $(window).load ->
     $contactText.text($(this).attr('alt'))
   $contactIcon.mouseleave ->
     $contactText.text('')
+
+
+$(window).load ->
+  navBar = new NavBar
+  navBar.update($(window).scrollTop())
+
+  # Scroll monitor
+  $(window).scroll ->
+    navBar.update($(window).scrollTop())
+
+  # Resize monitor
+  $(window).resize ->
+    navBar.buildMenuLinks()
+
 
 class NavBar
   constructor: ->

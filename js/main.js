@@ -4,23 +4,12 @@
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   $(document).ready(function() {
-    return $('#contactFormButton.hidden_email').hover(function() {
+    var $contactIcon, $contactText;
+    $('#contactFormButton.hidden_email').hover(function() {
       var emailAddress;
       emailAddress = atob('bW9jLmxpYW1nQGVsZmZ1b2lwLm5pbWFqbmVi').split("").reverse().join("");
       $(this).attr('href', "mailto:" + emailAddress);
       return $(this).removeClass('hidden_email');
-    });
-  });
-
-  $(window).load(function() {
-    var $contactIcon, $contactText, navBar;
-    navBar = new NavBar;
-    navBar.update($(window).scrollTop());
-    $(window).scroll(function() {
-      return navBar.update($(window).scrollTop());
-    });
-    $(window).resize(function() {
-      return navBar.buildMenuLinks();
     });
     $('#btnExpandWorkExperiences').click(function() {
       $(this).slideUp(400, 'easeOutQuart');
@@ -33,6 +22,18 @@
     });
     return $contactIcon.mouseleave(function() {
       return $contactText.text('');
+    });
+  });
+
+  $(window).load(function() {
+    var navBar;
+    navBar = new NavBar;
+    navBar.update($(window).scrollTop());
+    $(window).scroll(function() {
+      return navBar.update($(window).scrollTop());
+    });
+    return $(window).resize(function() {
+      return navBar.buildMenuLinks();
     });
   });
 
