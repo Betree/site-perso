@@ -62,29 +62,28 @@
         .content
           %h2 About me
           %p.description{:itemscope => "", :itemtype => "http://data-vocabulary.org/Person"}<
-            %span>My name is&nbsp
-            %span{:itemprop => "name"}< Benjamin Piouffle
-            %span>. I'm a French student about to graduate at the French school&nbsp
-            %span{:itemprop => "affiliation"}<
+            My name is&nbsp
+            %span{:itemprop => "name"}> Benjamin Piouffle
+            \. I'm a French student about to graduate at the French school&nbsp
+            %span{:itemprop => "affiliation"}<>
               %b Epitech
-            %span>. I studied computer science for three years at&nbsp
-            %b Epitech in Marseille (France)
-            %span>, one year at
+            \. I studied computer science for 4 years at&nbsp
+            %b> Epitech in Marseille (France)
+            , one year at
             %span{:itemprop => "affiliation"}
               %b
                 California State University of
                 %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
-                  %span{:itemprop => "locality"} Long Beach
-                  (USA)
-            %span>and I'm currently living in Paris for my final year.
+                  %span{:itemprop => "locality"} Long Beach (USA)
+            %span>and I'm currently living in Nouméa, New Caledonia.
             %br
             %br>
             %span>I have also worked as a&nbsp
             %span{:itemprop => "title"} developer
-            %span>for three IT companies along with my studies for almost two years.
+            in different companies along with my studies for almost three years.
             %br
             %br
-            %span>Programming is my job but also one of my passions !
+            %span>I love DIY, coding and thinking about how we could create a better future using technology.
       #slide2.slide
         .content
           %h2{:style => "color:black;"} Education
@@ -132,7 +131,7 @@
                 %b Factset
                 – Fullstack Developer
               %p
-                Main technologies : C++ / Python
+                Main technologies : C++, C#, Python
             .experienceBlock
               .experienceTitle
                 %span.timePeriod> September 2013 – June 2014
@@ -144,7 +143,7 @@
                 My work mainly consisted of improving the main company's product “Numsync”, creating a REST API
                 and automatizing the build of mobile applications.
                 %br>
-                Main technologies : Java / J2EE, REST API, Android / IOS builds
+                Main technologies : Java / J2EE, REST API, Android and IOS builds
             .experienceBlock
               .experienceTitle
                 %span.timePeriod> July 2012 – December 2012
@@ -182,14 +181,13 @@
         .content
           %h2{:style => "color:black;"} Skills
           .description
-            %h3 Technologies
+            %h3 Favorite Technologies
             %hr
             .col
               %h4 Software programming
               .row
-                .skillText C
-                .skillText C++
-                %img.skillLogo{:alt => "Arduino", :height => "75px", :src => "img/icons_skills/arduino.png", :title => "Arduino"}
+                .skillText C / C++
+                .skillText C#
             .col
               %h4 Scripting
               .row
@@ -200,20 +198,20 @@
                 %img.skillLogo{:alt => "GNU/Linux", :height => "75px", :src => "img/icons_skills/gnulinux.png", :title => "GNU/Linux"}
                 %img.skillLogo{:alt => "Windows", :height => "75px", :src => "img/icons_skills/windows.png", :title => "Windows"}
                 %img.skillLogo{:alt => "Android", :height => "75px", :src => "img/icons_skills/android.png", :title => "Android"}
+                %img.skillLogo{:alt => "Arduino", :height => "75px", :src => "img/icons_skills/arduino.png", :title => "Arduino"}
             .col
               %h4 Databases
               .row
-                %img.skillLogo{:alt => "MySQL", :height => "75px", :src => "img/icons_skills/mysql.svg", :title => "MySQL"}
                 %img.skillLogo{:alt => "PostgreSQL", :height => "75px", :src => "img/icons_skills/postgresql.svg", :title => "PostgreSQL"}
+                %img.skillLogo{:alt => "MongoDB", :height => "75px", :src => "img/icons_skills/mongodb.png", :title => "MongoDB"}
+                %img.skillLogo{:alt => "MySQL", :height => "75px", :src => "img/icons_skills/mysql.svg", :title => "MySQL"}
             .col
               %h4 Web programming
               .row
                 %img.skillLogo{:alt => "Ruby On Rails", :height => "75px", :src => "img/icons_skills/ruby-on-rails.png", :title => "Ruby On Rails"}
                 %img.skillLogo{:alt => "HTML5", :height => "75px", :src => "img/icons_skills/html5.svg", :title => "HTML5"}
                 %img.skillLogo{:alt => "HAML", :height => "75px", :src => "img/icons_skills/haml.png", :title => "HAML"}
-                %img.skillLogo{:alt => "Javascript", :height => "75px", :src => "img/icons_skills/javascript.svg", :title => "Javascript"}
                 %img.skillLogo{:alt => "Coffeescript", :height => "75px", :src => "img/icons_skills/coffeescript.png", :title => "Coffeescript"}
-                %img.skillLogo{:alt => "JQuery", :height => "75px", :src => "img/icons_skills/jquery.svg", :title => "JQuery"}
             .col
               %h4 Tools
               .row
@@ -247,9 +245,6 @@
               %br
               %br
               Technologies : Ruby on Rails, HAML, SASS
-            %img{src: 'img/projects/edzafilms/home_page.png', width: '500'}
-            %img{src: 'img/projects/edzafilms/prestations_page.png', width: '500'}
-            %img{src: 'img/projects/edzafilms/contact_page.png', width: '500'}
           .project.description
             %h3
               %a{href: 'https://github.com/Betree/magicblue'}Magic Blue bulb unofficial API
@@ -259,30 +254,35 @@
               %br
               This open-source project consist of the reverse engineering work to bring all the features
               from the official mobile application in some easy to use and well documented Python scripts.
+          .project.description
+            And more on my
+            %a{href: 'https://github.com/Betree'}
+              Github
       #slide6.slide
         .content
           %h2 Interests
           .description_container
             .description
+              %h3 Society
+              %hr
+              %p
+                I'm deeply interested by the civic tech field; it is trying to change politics using technology the same
+                way it changed our habits of sharing and consuming information.
+                I really think technology has a role to play in social crisis facing most of today's governments, may
+                it be with a better access to public debates or by giving citizens new channels to express their
+                opinions.
               %h3 Music
               %hr
               .col
                 %h4 Guitar
                 %p
-                  I've been playing guitar for 8 years. My favorite thing is to improvise and my tastes being quite open, I could play with almost everything.
-                  %br
-                  I also sometimes try to record songs that I put on
-                  = succeed "." do
-                    %a{:href => "https://soundcloud.com/betree"} soundcloud
+                  I've been playing guitar for many years now though keeping a routine is not always easy.
               .col
                 %h4 Saxophone
-                %p I played saxophone during 2 years when I was younger and I recently tried to get back to it. However I couldn't take it with me on the plane and can't wait to find it back when I'll come home.
+                %p I played saxophone during two years when I was younger and I'm slowly getting back to it.
               %h3 Sport
               %hr
-              %p Hikking, trekking, bicycling
-              %h3 Others
-              %hr
-              %p Travelling, motorcycling
+              %p Hikking, trekking, bicycling, motorcycling
       #slide7.slide
         .content
           %h2{:style => "color:black;"} Contact
