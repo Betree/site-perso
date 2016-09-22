@@ -36,7 +36,7 @@
       .content
         #logo
           %a{:href => "#slide1"}
-            %img#profilePicture{:align => "left", :src => "img/me.png"}
+            %img#profilePicture{:align => "left", :src => "img/me.png", :alt => "me"}
             %h1 Benjamin Piouffle
         #navContainer
           %nav#nav
@@ -83,14 +83,14 @@
             in different companies along with my studies for almost three years.
             %br
             %br
-            %span>I love DIY, coding and thinking about how we could create a better future using technology.
+            %span>I love DIY, music and thinking about how we could create a better future using technology !
       #slide2.slide
         .content
-          %h2{:style => "color:black;"} Education
+          %h2 Education
           .description_container
             .description
               .experienceBlock
-                %img.experienceLogo{:src => "img/logo_epitech.png"}
+                %img.experienceLogo{:src => "img/logo_epitech.png", alt: "Epitech"}
                 .experienceTitle
                   %span.timePeriod October 2011 – Present
                   %br
@@ -105,7 +105,7 @@
                   %br
                   Fifth year: Artificial intelligence, evolution programming, personal projects
               .experienceBlock
-                %img.experienceLogo{:src => "img/logo_csulb.png"}
+                %img.experienceLogo{:src => "img/logo_csulb.png", alt: "CSULB"}
                 .experienceTitle
                   %span.timePeriod October 2014 – June 2015
                   %br
@@ -179,7 +179,7 @@
                 %p
       #slide4.slide
         .content
-          %h2{:style => "color:black;"} Skills
+          %h2 Skills
           .description
             %h3 Favorite Technologies
             %hr
@@ -285,7 +285,7 @@
               %p Hikking, trekking, bicycling, motorcycling
       #slide7.slide
         .content
-          %h2{:style => "color:black;"} Contact
+          %h2 Contact
           .description_container
             .row
               %a#contactFormButton.hidden_email{:href => "mailto:Please activate Javascript to see my real email"}<
