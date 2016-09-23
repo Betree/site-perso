@@ -22,12 +22,14 @@ h1 {
 
 h2 {
     font-family: "Arvo", "Arial", serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 40px;
     text-align: center;
-    color: #fff;
+    color: #333;
     margin: 0 0 50px 0;
     padding: 0;
+    text-decoration: underline;
+    text-shadow: 1px 1px 0px #abaaaa;
 }
 
 h3 {
@@ -52,8 +54,20 @@ h4 {
     position: relative;
 }
 
+a {
+    color: #2c91c3;
+}
+
+a:hover {
+    color: #00a9ff;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .parallax {
-    background: #3B3F77;
+    background: whitesmoke;
 }
 
 .content {
@@ -92,7 +106,7 @@ h4 {
 
 #header {
     width: 100%;
-    background: rgba(72, 100, 139, 0);
+    background-color: rgba(72, 100, 139, 0);
     height: 78px;
     padding-top: 2px;
     position: fixed;
@@ -105,7 +119,8 @@ h4 {
 }
 
 #header.fixed {
-    background-color: rgb(72, 100, 139);
+    background-color: rgb(35, 126, 173);
+    background-color: linear-gradient(to right, rgba(35,127,173,1) 10%, hsl(200, 66%, 52%) 25%, rgba(35,127,173,1) 79%, rgba(35,127,173,1) 83%);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     -webkit-transition: background-color 0.5s, box-shadow 0.5s;
     -moz-transition: background-color 0.5s, box-shadow 0.5s;
@@ -198,7 +213,7 @@ h4 {
 .description {
     font-family: 'Goudy Bookletter 1911', serif;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 26px;
     text-align: left;
 }
 
@@ -210,6 +225,12 @@ h4 {
 .experienceBlock .experienceLogo {
     float: right;
     max-width: 100%;
+    max-height: 85px;
+    max-width: 250px;
+}
+
+.experienceTitle {
+    font-size: 29px;
 }
 
 .experienceTitle .timePeriod {
@@ -233,22 +254,31 @@ h4 {
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
     padding-top: 8vh;
     padding-bottom: 10vh;
+    min-height: 82vh;
 }
 
 .slide .content {
-    margin: 80px auto;
+    margin: 60px auto 0 auto;
+    color: #555;
 }
 
 #slide1 .content {
-    margin: 120px auto;
+    margin: 120px auto 0 auto;
+    background-color: whitesmoke;
+    padding: 60px 75px 45px 75px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 0px #80756e inset;
+}
+
+#slide1 .description {
+    font-size: 28px;
 }
 
 #slide1 {
     background: url('../img/slide1.jpg') 50% 0 no-repeat fixed;
-    color: whitesmoke;
+    color: #333333;
     margin: 0;
     background-size: cover;
-    min-height: 100vh;
 }
 
 #slide2 {
@@ -259,9 +289,16 @@ h4 {
 }
 
 #slide3 {
-    background: url("../img/slide3.jpg") 50% 0 no-repeat fixed;
+    background: url('../img/slide3.jpg') no-repeat fixed;
+    background-position-x: 55%;
     background-size: cover;
-    color: whitesmoke;
+}
+
+#slide3 .content > .description {
+    background-color: whitesmoke;
+    padding: 60px 75px 45px 75px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 0px #80756e /*inset*/;
 }
 
 #slide4 {
@@ -278,18 +315,17 @@ h4 {
 }
 
 #slide5 {
-    /*background: #232323;*/
-    background: #121325;
-    color: whitesmoke;
+    background: url('../img/slide5.jpg') no-repeat fixed;
+    background-size: cover;
 }
 
 #slide5 .project {
     text-align: center;
-    /*background: #383838;*/
-    background: rgba(37, 36, 36, 0.42);
-    border-radius: 15px;
-    padding: 25px;
+    border-radius: 3px;
+    padding: 25px 35px;
     margin-bottom: 25px;
+    box-shadow: 0px 0px 20px 0px #80756e;
+    background: whitesmoke;
 }
 
 #slide5 .project img {
@@ -301,21 +337,16 @@ h4 {
 }
 
 #slide5 .project.description h3 a {
-    color: #5A88CA;
-    font-size: 2.5rem;
+    font-size: 29px;
     text-shadow: 1px 2px 3px rgba(88, 0, 0, 0.26);
 }
 
-#slide5 .project.description h3 a:hover {
-    color: #9AAECA;
-    text-shadow: 1px 2px 3px #002A67;
-}
-
 #slide6 {
-    background: url("../img/slide6.jpg") 50% 0 no-repeat fixed;
     margin: 0 auto;
     color: white;
+    background: url('../img/slide6.jpg') no-repeat fixed;
     background-size: cover;
+    background-position-x: 55%;
 }
 
 #slide6 .col {
@@ -325,8 +356,7 @@ h4 {
 #slide7 {
     background-color: whitesmoke;
     color: whitesmoke;
-    box-shadow: 0 0 8px white;
-    padding-bottom: 1px;
+    padding-bottom: 8vh;
 }
 
 .skillText {

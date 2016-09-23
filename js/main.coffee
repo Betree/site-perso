@@ -14,6 +14,7 @@ $(document).ready ->
   $contactIcon = $('.contactIcon')
   $contactText = $('#contact_text')
 
+  # Show contact types labels
   $contactIcon.mouseenter ->
     $contactText.text($(this).attr('alt'))
   $contactIcon.mouseleave ->
