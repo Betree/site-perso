@@ -106,7 +106,7 @@ a:hover {
 
 #header {
     width: 100%;
-    background: rgba(72, 100, 139, 0);
+    background-color: rgba(72, 100, 139, 0);
     height: 78px;
     padding-top: 2px;
     position: fixed;
@@ -119,8 +119,8 @@ a:hover {
 }
 
 #header.fixed {
-    background: rgb(35, 126, 173);
-    background: linear-gradient(to right, rgba(35,127,173,1) 10%, hsl(200, 66%, 52%) 25%, rgba(35,127,173,1) 79%, rgba(35,127,173,1) 83%);
+    background-color: rgb(35, 126, 173);
+    background-color: linear-gradient(to right, rgba(35,127,173,1) 10%, hsl(200, 66%, 52%) 25%, rgba(35,127,173,1) 79%, rgba(35,127,173,1) 83%);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     -webkit-transition: background-color 0.5s, box-shadow 0.5s;
     -moz-transition: background-color 0.5s, box-shadow 0.5s;
@@ -225,6 +225,8 @@ a:hover {
 .experienceBlock .experienceLogo {
     float: right;
     max-width: 100%;
+    max-height: 85px;
+    max-width: 250px;
 }
 
 .experienceTitle {
@@ -273,7 +275,7 @@ a:hover {
 }
 
 #slide1 {
-    background: url('../img/new/5.JPG') 50% 0 no-repeat fixed;
+    background: url('../img/slide1.jpg') 50% 0 no-repeat fixed;
     color: #333333;
     margin: 0;
     background-size: cover;
@@ -287,7 +289,8 @@ a:hover {
 }
 
 #slide3 {
-    background: url('../img/new/9.JPG') no-repeat fixed;
+    background: url('../img/slide3.jpg') no-repeat fixed;
+    background-position-x: 55%;
     background-size: cover;
 }
 
@@ -312,7 +315,7 @@ a:hover {
 }
 
 #slide5 {
-    background: url('../img/new/6.JPG') no-repeat fixed;
+    background: url('../img/slide5.jpg') no-repeat fixed;
     background-size: cover;
 }
 

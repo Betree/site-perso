@@ -59,7 +59,7 @@ class NavBar
     @update($(window).scrollTop())
 
   update: (scrollTop) ->
-#    @colorize scrollTop
+    @colorize scrollTop
     @updateProgressBar scrollTop
 
   colorize: (scrollTop) ->

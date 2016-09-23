@@ -83,6 +83,7 @@
     };
 
     NavBar.prototype.update = function(scrollTop) {
+      this.colorize(scrollTop);
       return this.updateProgressBar(scrollTop);
     };
 

@@ -64,26 +64,24 @@
           %p.description{:itemscope => "", :itemtype => "http://data-vocabulary.org/Person"}<
             My name is&nbsp
             %span{:itemprop => "name"}> Benjamin Piouffle
-            \. I'm a French student about to graduate at the French school&nbsp
+            \. I'm a French student recently graduated from the French school&nbsp
             %span{:itemprop => "affiliation"}<>
               %b Epitech
-            \. I studied computer science for 4 years at&nbsp
-            %b> Epitech in Marseille (France)
-            , one year at
+            \. I did my fourth year of scolarship abroad at
             %span{:itemprop => "affiliation"}
               %b
                 California State University of
                 %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
                   %span{:itemprop => "locality"} Long Beach (USA)
-            %span>and I'm currently living in Nouméa, New Caledonia.
+            %span>. I'm currently living in Nouméa, New Caledonia.
             %br
             %br>
-            %span>I have also worked as a&nbsp
+            %span>I have, along with my studies, worked as a&nbsp
             %span{:itemprop => "title"} developer
-            in different companies along with my studies for almost three years.
+            in companies of various size, from the startup to the global company.
             %br
             %br
-            %span>I love DIY, music and thinking about how we could create a better future using technology !
+            %span>I love DIY, music and thinking about how technology could help us solving the crises that the world is facing.
       #slide2.slide
         .content
           %h2 Education
@@ -105,7 +103,7 @@
                   %br
                   Fifth year: Artificial intelligence, evolution programming, personal projects
               .experienceBlock
-                %img.experienceLogo{:src => "img/logo_csulb.png", alt: "CSULB"}
+                %img.experienceLogo{:src => "img/logo_csulb-color.png", alt: "CSULB"}
                 .experienceTitle
                   %span.timePeriod October 2014 – June 2015
                   %br
@@ -125,6 +123,7 @@
           %h2 Work
           .description
             .experienceBlock
+              %img.experienceLogo{:src => "img/factset.png", alt: "Factset"}
               .experienceTitle
                 %span.timePeriod> September 2015 – September 2016
                 %br
@@ -133,19 +132,21 @@
               %p
                 Main technologies : C++, C#, Python
             .experienceBlock
+              %img.experienceLogo{:src => "img/numvision.png", alt: "Numvision"}
               .experienceTitle
                 %span.timePeriod> September 2013 – June 2014
                 %br
                 %b Numvision
                 – Java / J2EE Developer
               %p
-                Numvision is a company located in south of France that provide file backup and synchronisation solutions for companies.
+                Numvision is a company located in the south of France that provides files backup and synchronisation solutions for companies.
                 My work mainly consisted of improving the main company's product “Numsync”, creating a REST API
                 and automatizing the build of mobile applications.
                 %br
                 %br
                 Main technologies : Java / J2EE, REST API, Android and IOS builds
             .experienceBlock
+              %img.experienceLogo{:src => "img/efrogg.png", alt: "EFrogg"}
               .experienceTitle
                 %span.timePeriod> July 2012 – December 2012
                 %br
@@ -241,23 +242,24 @@
             %h3
               %a{href: 'http://edzafilms.com'}Edzafilms.com
             %p
-              A website to present “Edza Films”, a french audio-visual association made of film directors, sound
-              engineers cameramen and other really nice people I was happy to work with.
+              A website to present “Edza Films”, a french audio-visual association with members such as film directors,
+              sound engineers, cameramen and other folks I was happy to work with.
               The team can upload pictures, videos, post news and manage a lot of content directly from the website.
               %br
               %br
-              Technologies : Ruby on Rails, HAML, SASS
+              Technologies : Ruby on Rails, HAML, SASS, Coffeescript
           .project.description
             %h3
               %a{href: 'https://github.com/Betree/magicblue'}Magic Blue bulb unofficial API
             %p
               Python script and library to control Magic Blue bulbs over Bluetooth. These are probably the cheapest RGB
-              light bulbs you can find on the market but no API exists and they're not documented anywhere.
+              light bulbs you can find on the market but no official API exists and they're not documented anywhere.
+              %br
               %br
               This open-source project consist of the reverse engineering work to bring all the features
               from the official mobile application in some easy to use and well documented Python scripts.
           .project.description.text-center
-            More on my
+            More on
             %a{href: 'https://github.com/Betree'}
               Github
       #slide6.slide
@@ -265,11 +267,12 @@
           %h2 Interests
           .description_container
             .description
-              %h3 Society
+              %h3 Civic Tech
               %hr
               %p
                 I'm deeply interested by the civic tech field; it is trying to change politics using technology the same
-                way it changed our habits of sharing and consuming information.
+                way this technology changed our habits of sharing and consuming information.
+                %br
                 I really think technology has a role to play in social crisis facing most of today's governments, may
                 it be with a better access to public debates or by giving citizens new channels to express their
                 opinions.
