@@ -32,7 +32,7 @@
     }
 
     #slide1 .content {
-        padding: 50px 16px;
+        padding: 50px 0;
         width: 92%;
         height: 100%;
     }
@@ -69,6 +69,16 @@
 @media all and (max-width: 465px) {
     .description {
         font-size: 22px;
+    }
+
+    #slide1 {
+        padding-bottom: 0;
+    }
+
+    #slide1 .content {
+        width: 100%;
+        margin: 48px 0 0;
+        border-radius: 0;
     }
 }
 

@@ -265,13 +265,14 @@ a:hover {
 #slide1 .content {
     margin: 120px auto 0 auto;
     background-color: whitesmoke;
-    padding: 60px 75px 45px 75px;
+    padding: 60px 65px 45px 65px;
     border-radius: 25px;
     box-shadow: 0px 0px 20px 0px #80756e inset;
 }
 
 #slide1 .description {
     font-size: 28px;
+    padding: 0 16px;
 }
 
 #slide1 {
