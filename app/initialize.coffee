@@ -85,7 +85,6 @@ class NavBar
       if menuLink.targetOffsetTop <= scrollPosition + 100
         return menuLink
 
-
 class MenuLink
   constructor: ($link, @linkNum, @offsetLeft) ->
     @$this = $link
@@ -103,4 +102,3 @@ class MenuLink
       scrollOffset = $($(e.currentTarget).attr('href')).offset().top
       $('html,body').animate {scrollTop: scrollOffset}, 1000, 'easeOutQuart'
       false
-
