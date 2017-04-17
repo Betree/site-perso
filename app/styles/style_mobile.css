@@ -31,21 +31,17 @@
         display: block;
     }
 
-    #slide1 .content {
+    #slide-presentation .content {
         padding: 50px 0;
         width: 92%;
         height: 100%;
     }
 
-    #slide3 .content > .description {
+    #slide-work .content > .description {
         background: none;
         padding: 0;
         border-radius: 0px;
         box-shadow: none;
-    }
-
-    #slide6 .col {
-        width: 93%;
     }
 }
 
@@ -71,11 +67,11 @@
         font-size: 22px;
     }
 
-    #slide1 {
+    #slide-presentation {
         padding-bottom: 0;
     }
 
-    #slide1 .content {
+    #slide-presentation .content {
         width: 100%;
         margin: 48px 0 0;
         border-radius: 0;
@@ -101,10 +97,6 @@
     .slicknav_nav {
         font-size: 20px;
     }
-
-    #slide6 .col {
-        width: 90%;
-    }
 }
 
 @media all and (max-width: 1124px) {
@@ -121,17 +113,9 @@
     #header {
         background-color: rgb(72, 100, 139);
     }
-
-    #slide6 .col {
-        width: 88%;
-    }
 }
 
 @media all and (max-width: 230px) {
-    #slide6 .col {
-        width: 80%;
-    }
-
     #logo #profilePicture {
         display: none;
     }

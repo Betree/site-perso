@@ -5,11 +5,6 @@ $(document).ready ->
     $(this).attr('href', "mailto:#{emailAddress}")
     $(this).removeClass('hidden_email')
 
-  # Expand work experiences button on click
-  $('#btnExpandWorkExperiences').click ->
-    $(this).slideUp 400, 'easeOutQuart'
-    $('#secondaryExperiences').slideToggle 400, 'easeOutQuart'
-
   # Show contact service provider on hover
   $contactIcon = $('.contactIcon')
   $contactText = $('#contact_text')

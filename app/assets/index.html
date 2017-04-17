@@ -3,7 +3,6 @@
   <head>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
-    <meta content='true' name='HandheldFriendly'>
     <title>Benjamin Piouffle</title>
     <link href='app.css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
@@ -23,15 +22,12 @@
     <link href='img/favicon/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
     <link href='img/favicon/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
     <link href='img/favicon/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-    <meta content='#ffffff' name='msapplication-TileColor'>
-    <meta content='img/favicon/ms-icon-144x144.png' name='msapplication-TileImage'>
-    <meta content='#ffffff' name='theme-color'>
   </head>
   <body>
     <header class='fixed noselect' id='header'>
       <div class='content'>
         <div id='logo'>
-          <a href='#slide1'>
+          <a href='#slide-presentation'>
             <img align='left' alt='me' id='profilePicture' src='img/benjaminpiouffle.png'>
             <h1>Benjamin Piouffle</h1>
           </a>
@@ -39,27 +35,12 @@
         <div id='navContainer'>
           <nav id='nav'>
             <ul id='menu'>
-              <li>
-                <a href='#slide1'>About me</a>
-              </li>
-              <li>
-                <a href='#slide2'>Education</a>
-              </li>
-              <li>
-                <a href='#slide3'>Work</a>
-              </li>
-              <li>
-                <a href='#slide4'>Skills</a>
-              </li>
-              <li>
-                <a href='#slide5'>Projects</a>
-              </li>
-              <li>
-                <a href='#slide6'>Interests</a>
-              </li>
-              <li>
-                <a href='#slide7'>Contact</a>
-              </li>
+              <li><a href='#slide-presentation'>About me</a></li>
+              <li><a href='#slide-education'>Education</a></li>
+              <li><a href='#slide-skills'>Skills</a></li>
+              <li><a href='#slide-projects'>Projects</a></li>
+              <li><a href='#slide-work'>Work</a></li>
+              <li><a href='#slide-contact'>Contact</a></li>
             </ul>
           </nav>
           <div class='hidden' id='menuScrollProgress'></div>
@@ -68,20 +49,29 @@
       </div>
     </header>
     <div class='parallax'>
-      <div class='slide' id='slide1'>
+      <div class='slide' id='slide-presentation'>
         <div class='content'>
           <h2>About me</h2>
-          <p class='description' itemscope='' itemtype='http://data-vocabulary.org/Person'>My name is&nbsp<span itemprop='name'>Benjamin Piouffle</span>. I'm a French student recently graduated from the French school&nbsp<span itemprop='affiliation'><b>Epitech</b></span>. I did my fourth year of scolarship abroad at the&nbsp<span itemprop='affiliation'><b>California State University of Long Beach (USA)</b></span>. I'm currently living in Nouméa, New Caledonia.
-          <br>
-          <br>
-          <span>I have, along with my studies, worked as a&nbsp</span>
-          <span itemprop='title'>developer</span>
-          in companies of various size, from the startup to the global company for almost 3 years.
-          <br>
-          <br><span>I love DIY, music and thinking about how technology could help us solving the crises that the world is facing.</span></p>
+          <p class='description' itemscope='' itemtype='http://data-vocabulary.org/Person'>
+            I'm <span itemprop='name'>Benjamin Piouffle</span>,
+            a French developer graduated from the French school
+            <span itemprop='affiliation'><b>Epitech</b></span>.
+            I also studied for one year abroad at the
+            <span itemprop='affiliation'><b>California State University of Long Beach (USA)</b></span>
+            and I'm currently living in Nouméa, New Caledonia.
+            <br>
+            <br>
+            <span>I have, along with my studies, worked on multiple projects
+            in companies of various size, from the startup to the global company for almost 3 years.
+            <br>
+            <br>
+            My current focus is on personal projects, mostely linked to the
+            <a href="https://en.wikipedia.org/wiki/Civic_technology">civic tech</a>,
+            and on open source projects I want to contribute to.
+          </p>
         </div>
       </div>
-      <div class='slide' id='slide2'>
+      <div class='slide' id='slide-education'>
         <div class='content'>
           <h2>Education</h2>
           <div class='description_container'>
@@ -89,7 +79,7 @@
               <div class='experienceBlock'>
                 <img alt='Epitech' class='experienceLogo' src='img/logo_epitech.png'>
                 <div class='experienceTitle'>
-                  <span class='timePeriod'>October 2011 – Present</span>
+                  <span class='timePeriod'>October 2011 – August 2016</span>
                   <br>
                   <b>Epitech</b>
                   (France)
@@ -129,77 +119,7 @@
           </div>
         </div>
       </div>
-      <div class='slide' id='slide3'>
-        <div class='content'>
-          <h2>Work</h2>
-          <div class='description'>
-            <div class='experienceBlock'>
-              <img alt='Factset' class='experienceLogo' src='img/factset.png'>
-              <div class='experienceTitle'><span class='timePeriod'>September 2015 – September 2016</span><br>
-                <b>Factset</b>
-                – Fullstack Developer
-              </div>
-              <p>
-                Main technologies : C++, C#, Python
-              </p>
-            </div>
-            <div class='experienceBlock'>
-              <img alt='Numvision' class='experienceLogo' src='img/numvision.png'>
-              <div class='experienceTitle'><span class='timePeriod'>September 2013 – June 2014</span><br>
-                <b>Numvision</b>
-                – Java / J2EE Developer
-              </div>
-              <p>
-                Numvision is a company located in the south of France that provides files backup and synchronisation solutions for companies.
-                My work mainly consisted of improving the main company's product “Numsync”, creating a REST API
-                and automatizing the build of mobile applications.
-                <br>
-                <br>
-                Main technologies : Java / J2EE, REST API, Android and IOS builds
-              </p>
-            </div>
-            <div class='experienceBlock'>
-              <img alt='EFrogg' class='experienceLogo' src='img/efrogg.png'>
-              <div class='experienceTitle'><span class='timePeriod'>July 2012 – December 2012</span><br>
-                <b>E­Frogg</b>
-                – Web Developer Internship
-              </div>
-              <p>
-                Internship at E­Frogg, a web agency. Development of a SEO analysis tool and work on various websites.
-                <br>
-                <br>
-                Main technologies : HTML, Javascript, JQuery, PHP, MySQL
-              </p>
-            </div>
-            <div style='text-align:center;'>
-              <button class='btn' id='btnExpandWorkExperiences'>Show more work experience (Non IT related)</button>
-            </div>
-            <div id='secondaryExperiences' style='display:none;'>
-              <div class='experienceBlock'>
-                <div class='experienceTitle'><span class='timePeriod'>August 2011 – September 2011</span><br>
-                  <b>Sanary­ City Hall</b>
-                  – Summer job
-                </div>
-                <p></p>
-              </div>
-              <div class='experienceBlock'>
-                <div class='experienceTitle'><span class='timePeriod'>January 2009 – May 2009</span><br>
-                  <b>Independent</b>
-                </div>
-                <p>Computer lessons for individuals</p>
-              </div>
-              <div class='experienceBlock'>
-                <div class='experienceTitle'><span class='timePeriod'>July – August 2008</span><br>
-                  <b>Mistral Diesel</b>
-                  – Inventory assistant
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='slide' id='slide4'>
+      <div class='slide' id='slide-skills'>
         <div class='content'>
           <h2>Skills</h2>
           <div class='description'>
@@ -219,11 +139,9 @@
               </div>
             </div>
             <div class='col'>
-              <h4>Operating systems</h4>
+              <h4>Operating systems / Platforms</h4>
               <div class='row'>
                 <img alt='GNU/Linux' class='skillLogo' height='75px' src='img/icons_skills/gnulinux.png' title='GNU/Linux'>
-                <img alt='Windows' class='skillLogo' height='75px' src='img/icons_skills/windows.png' title='Windows'>
-                <img alt='Android' class='skillLogo' height='75px' src='img/icons_skills/android.png' title='Android'>
                 <img alt='Arduino' class='skillLogo' height='75px' src='img/icons_skills/arduino.png' title='Arduino'>
               </div>
             </div>
@@ -238,11 +156,10 @@
             <div class='col'>
               <h4>Web programming</h4>
               <div class='row'>
+                <img alt='Elixir' class='skillLogo' height='75px' src='img/icons_skills/elixir.png' title='Elixir'>
+                <img alt='Phoenix Framework' class='skillLogo' height='75px' src='img/icons_skills/phoenix.png' title='Phoenix Framework'>
                 <img alt='Ruby On Rails' class='skillLogo' height='75px' src='img/icons_skills/ruby-on-rails.png' title='Ruby On Rails'>
                 <img alt='React.js' class='skillLogo' height='75px' src='img/icons_skills/react.svg' title='React.js'>
-                <img alt='HTML5' class='skillLogo' height='75px' src='img/icons_skills/html5.svg' title='HTML5'>
-                <img alt='HAML' class='skillLogo' height='75px' src='img/icons_skills/haml.png' title='HAML'>
-                <img alt='Coffeescript' class='skillLogo' height='75px' src='img/icons_skills/coffeescript.png' title='Coffeescript'>
               </div>
             </div>
             <div class='col'>
@@ -253,15 +170,6 @@
                 <img alt='Bitcoin' class='skillLogo' height='75px' src='img/icons_skills/bitcoin.png' title='Bitcoin'>
               </div>
             </div>
-            <div class='col'>
-              <h4>Others</h4>
-              <div class='row'>
-                <div class='skillText'>Restful APIs</div>
-                <div class='skillText'>Agile software development</div>
-              </div>
-            </div>
-            <br>
-            <br>
             <h3>Languages</h3>
             <hr>
             <div class='col'>
@@ -271,10 +179,19 @@
                 <div class='skillText'>Italian (basic)</div>
               </div>
             </div>
+            <h3>Others</h3>
+            <hr>
+            <div class='col'>
+              <div class='row'>
+                <div class='skillText'>Project Management</div>
+                <div class='skillText'>Agile / Scrum</div>
+                <div class='skillText'>Trolling</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class='slide' id='slide5'>
+      <div class='slide' id='slide-projects'>
         <div class='content'>
           <h2>Projects</h2>
           <div class='project description'>
@@ -326,41 +243,52 @@
           </div>
         </div>
       </div>
-      <div class='slide' id='slide6'>
+      <div class='slide' id='slide-work'>
         <div class='content'>
-          <h2>Interests</h2>
-          <div class='description_container'>
-            <div class='description'>
-              <h3>Civic Tech</h3>
-              <hr>
+          <h2>Work Experience</h2>
+          <div class='description'>
+            <div class='experienceBlock'>
+              <img alt='Factset' class='experienceLogo' src='img/factset.png'>
+              <div class='experienceTitle'><span class='timePeriod'>September 2015 – September 2016</span><br>
+                <b>Factset</b>
+                – Fullstack Developer
+              </div>
               <p>
-                I'm deeply interested by the civic tech field; it is trying to change politics using technology the same
-                way this technology changed our habits of sharing and consuming information.
-                <br>
-                I really think technology has a role to play in social crisis facing most of today's governments, may
-                it be with a better access to public debates or by giving citizens new channels to express their
-                opinions.
+                Main technologies : C++, C#, Python
               </p>
-              <h3>Music</h3>
-              <hr>
-              <div class='col'>
-                <h4>Guitar</h4>
-                <p>
-                  I've been playing guitar for many years now though keeping a routine is not always easy.
-                </p>
+            </div>
+            <div class='experienceBlock'>
+              <img alt='Numvision' class='experienceLogo' src='img/numvision.png'>
+              <div class='experienceTitle'><span class='timePeriod'>September 2013 – June 2014</span><br>
+                <b>Numvision</b>
+                – Java / J2EE Developer
               </div>
-              <div class='col'>
-                <h4>Saxophone</h4>
-                <p>I played saxophone during two years when I was younger and I'm slowly getting back to it.</p>
+              <p>
+                Numvision is a company located in the south of France that provides files backup and synchronisation solutions for companies.
+                My work mainly consisted of improving the main company's product “Numsync”, creating a REST API
+                and automatizing the build of mobile applications.
+                <br>
+                <br>
+                Main technologies : Java / J2EE, REST API, Android and IOS builds
+              </p>
+            </div>
+            <div class='experienceBlock'>
+              <img alt='EFrogg' class='experienceLogo' src='img/efrogg.png'>
+              <div class='experienceTitle'><span class='timePeriod'>July 2012 – December 2012</span><br>
+                <b>E­Frogg</b>
+                – Web Developer Internship
               </div>
-              <h3>Sport</h3>
-              <hr>
-              <p>Hikking, trekking, bicycling, motorcycling</p>
+              <p>
+                Internship at E­Frogg, a web agency. Development of a SEO analysis tool and work on various websites.
+                <br>
+                <br>
+                Main technologies : HTML, Javascript, JQuery, PHP, MySQL
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class='slide' id='slide7'>
+      <div class='slide' id='slide-contact'>
         <div class='content'>
           <h2>Contact</h2>
           <div class='description_container'>
