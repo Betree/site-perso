@@ -27,3 +27,6 @@ tmp/
 
 # Bower stuff.
 bower_components/
+
+# IDE
+.idea/workspace.xml

@@ -9,7 +9,9 @@
     "start": "brunch watch --server",
     "build": "brunch build --production"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gzip-brunch": "^1.3.0"
+  },
   "devDependencies": {
     "auto-reload-brunch": "^2",
     "brunch": "^2",
