@@ -29,4 +29,7 @@ tmp/
 bower_components/
 
 # IDE
-.idea/workspace.xml
+.idea
+
+# Build folder
+public
