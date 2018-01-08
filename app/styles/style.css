@@ -23,10 +23,10 @@ h1 {
 h2 {
     font-family: "Arvo", "Arial", serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2em;
     text-align: center;
     color: #333;
-    margin: 0 0 50px 0;
+    margin: 0 0 1.5em 0;
     padding: 0;
     text-decoration: underline;
     text-shadow: 1px 1px 0px #abaaaa;
@@ -220,37 +220,37 @@ a:hover {
 
 .description iframe {
     width: 100%;
+    border-radius: 5px;
 }
 
 .experienceBlock p {
-    padding: 0 0.5em;
+    padding: 0 0.5em 0 0.5em;
+    margin: 0.5em;
+    border-left: 1px solid #d0d0d0;
 }
 
 .slide .experienceBlock:not(:last-child) {
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgb(161, 161, 161);
+    margin-bottom: 2em;
 }
 
 .experienceBlock .experienceLogo {
     float: right;
-    max-width: 100%;
     max-height: 85px;
     max-width: 250px;
 }
 
 .experienceTitle {
-    font-size: 29px;
+    text-align: left;
 }
 
-.experienceTitle .timePeriod {
-    /*border-bottom: 1px solid rgb(195, 195, 195);*/
+.experienceBlock .timePeriod {
     margin-bottom: 0.5em;
-    padding: 0.25em 0.5em;
-    border-radius: 5px;
-    background: #75c369;
+    padding: 0.25em 0.75em;
+    background-color: #237ead;
+    background-image: linear-gradient(141deg, #237ead 0%, #428fb7 71%, #4385a7 100%);
     color: white;
-    display: block;
-    width: fit-content;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .noselect {
