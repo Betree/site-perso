@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-    font-family: Oswald, "Arial", serif;
+    font-family: Arvo, "Arial", serif;
     font-weight: normal;
     font-size: 25px;
     text-align: center;
@@ -44,7 +44,7 @@ h3 {
 }
 
 h4 {
-    font-family: Oswald, "Arial", serif;
+    font-family: Arvo, "Arial", serif;
     font-weight: normal;
     font-size: 16px;
     text-align: center;
@@ -148,7 +148,7 @@ a:hover {
     float: left;
     font-size: 30px;
     margin-top: 20px;
-    font-family: "Wellfleet", serif;
+    font-family: "Arvo", serif;
     font-weight: bold;
     text-shadow: 0 1px 2px #373737;
 }
@@ -170,12 +170,12 @@ a:hover {
 }
 
 #nav li {
-    margin-top: 9px;
+    margin-top: 10px;
     float: left;
 }
 
 #menu li:not(:first-child) {
-    margin-left: 21px;
+    margin-left: 1em;
 }
 
 #menuScrollProgress {
@@ -195,9 +195,10 @@ a:hover {
 #nav li a {
     color: #fff;
     opacity: 0.6;
-    font-size: 16px;
+    font-size: 1em;
     text-decoration: none;
-    font-family: 'Wellfleet', serif;
+    font-family: 'Arvo', serif;
+    font-weight: bold;
 }
 
 #nav li a.active {
@@ -217,6 +218,14 @@ a:hover {
     text-align: left;
 }
 
+.description iframe {
+    width: 100%;
+}
+
+.experienceBlock p {
+    padding: 0 0.5em;
+}
+
 .slide .experienceBlock:not(:last-child) {
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(161, 161, 161);
@@ -234,7 +243,14 @@ a:hover {
 }
 
 .experienceTitle .timePeriod {
-    border-bottom: 1px solid rgb(195, 195, 195);
+    /*border-bottom: 1px solid rgb(195, 195, 195);*/
+    margin-bottom: 0.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+    background: #75c369;
+    color: white;
+    display: block;
+    width: fit-content;
 }
 
 .noselect {
@@ -313,6 +329,7 @@ a:hover {
 
 #slide-skills .skillLogo {
     height: 75px;
+    max-width: 100%;
 }
 
 #slide-skills .description h3:not(:first-child) {
@@ -330,7 +347,8 @@ a:hover {
     padding: 25px 35px;
     margin-bottom: 25px;
     box-shadow: 0px 0px 20px 0px #80756e;
-    background: whitesmoke;
+    border: 1px solid #a5a5a5;
+    background: #f7f7f7;
 }
 
 #slide-projects .project img {
@@ -339,11 +357,20 @@ a:hover {
 
 #slide-projects .project.description p {
     text-align: left;
+    margin-top: 0;
 }
 
 #slide-projects .project.description h3 a {
     font-size: 35px;
     text-shadow: 1px 2px 3px rgba(88, 0, 0, 0.26);
+    vertical-align: middle;
+}
+
+#slide-projects .project.description h3 img {
+    vertical-align: middle;
+    width: auto;
+    height: 75px;
+    margin-right: 0.25em;
 }
 
 #slide-contact {

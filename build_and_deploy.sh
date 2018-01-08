@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-npm run build
-./deploy.sh
+npm run build && ./deploy.sh

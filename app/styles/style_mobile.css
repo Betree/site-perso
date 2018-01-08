@@ -5,7 +5,7 @@
 
 @media all and (max-width: 1124px) {
     .content {
-        width: 80%;
+        width: 95%;
     }
 
     #header .content {
@@ -15,12 +15,22 @@
 
     #header h1 {
         font-size: 26px;
-        margin-top: 23px;
+        margin-top: 20px;
+    }
+
+    #logo #profilePicture {
+        margin-top: 7px;
+        height: 55px;
     }
 
     #nav {
         display: none;
         visibility: hidden;
+    }
+
+    .slicknav_menu {
+        font-size: 19px;
+        margin-top: 18px;
     }
 
     #navContainer .menuScrollProgress {
@@ -37,6 +47,10 @@
         height: 100%;
     }
 
+    #slide-projects .project.description {
+        padding: 2em 1em;
+    }
+
     #slide-work .content > .description {
         background: none;
         padding: 0;
@@ -45,20 +59,12 @@
     }
 }
 
-@media all and (max-width: 1124px) {
-    #logo #profilePicture {
-        margin-top: 10px;
-        height: 55px;
-    }
-
-    #header h1 {
-        font-size: 22px;
-        margin-top: 27px;
-    }
-
-    .slicknav_menu {
-        font-size: 19px;
-        margin-top: 18px;
+@media all and (max-width: 725px) {
+    .experienceBlock .experienceLogo, .experienceBlock .timePeriod {
+        display: block;
+        float: none;
+        margin: 0 auto 1em;
+        text-align: center;
     }
 }
 
@@ -76,17 +82,21 @@
         margin: 48px 0 0;
         border-radius: 0;
     }
+
+    #slide-projects .project.description iframe {
+        max-height: 223px;
+    }
 }
 
 @media all and (max-width: 430px) {
     #logo #profilePicture {
-        margin-top: 14px;
+        margin-top: 9px;
         height: 50px;
     }
 
     #header h1 {
         font-size: 16px;
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
     .slicknav_menu {
