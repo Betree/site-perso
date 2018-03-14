@@ -4,7 +4,7 @@ https://keybase.io/betree
 
 I hereby claim:
 
-  * I am an admin of http://benjamin.piouffle.me
+  * I am an admin of https://benjamin.piouffle.com
   * I am betree (https://keybase.io/betree) on keybase.
   * I have a public key ASA_0IUz_KIWqwtIIpBlP4K_jtZWoz4yM92sMjjEbw_AiAo
 
@@ -20,32 +20,32 @@ To do so, I am signing this object:
       "username": "betree"
     },
     "merkle_root": {
-      "ctime": 1507156030,
-      "hash": "4befe1033143f6fa6574e04af36f47a1cec35c9c7b9ca9e70e7704de4533adff53f45a1c7cac8263617c329aeee9af44058b8ba74a9d80f30d6ed9d100952ddf",
-      "hash_meta": "56029908f29ffbece03fe47138d99ae1ecc6248fabd8859e6034a1bfcf034527",
-      "seqno": 1502001
+      "ctime": 1521066130,
+      "hash": "856ad9601e24e75d7fc8a690765eb6250de20d689394968018a852c8525cffd6d22ad692dc2e0caaf81a7f7acf118290ad9a39533f3d470c96a173924cfe3728",
+      "hash_meta": "4ec9edd80ba730e24b57ea9e19dae791bc0fc67448447a5000c2441ff9e6c58b",
+      "seqno": 2237642
     },
     "service": {
-      "hostname": "benjamin.piouffle.me",
-      "protocol": "http:"
+      "hostname": "benjamin.piouffle.com",
+      "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 1
   },
   "client": {
     "name": "keybase.io go client",
-    "version": "1.0.33"
+    "version": "1.0.45"
   },
-  "ctime": 1507156049,
+  "ctime": 1521066215,
   "expire_in": 504576000,
-  "prev": "91898e2fef6448cde5f51d67987e61d9f96b8fffbbb569e0bfd19f1ccb5a3540",
-  "seqno": 15,
+  "prev": "f15aa0b208eb0f2c92978d39f4a5617ecac6cfff122779b63b3744149e440377",
+  "seqno": 19,
   "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgP9CFM/yiFqsLSCKQZT+Cv47WVqM+MjPdrDI4xG8PwIgKp3BheWxvYWTFA0p7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxOWE3NDFiNTk1M2UyZTkwY2VmZGVhNDA5NTcyZTU0ZWQ2ZDI5ZTE4NzBhMTUxZTdkMTZmNmRhMGJhYTdlM2Q5OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwM2ZkMDg1MzNmY2EyMTZhYjBiNDgyMjkwNjUzZjgyYmY4ZWQ2NTZhMzNlMzIzM2RkYWMzMjM4YzQ2ZjBmYzA4ODBhIiwidWlkIjoiYTY5ZTllYWM0YTIyNDM4ZmYwZDlkYzI0MmU2MzExMTkiLCJ1c2VybmFtZSI6ImJldHJlZSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwNzE1NjAzMCwiaGFzaCI6IjRiZWZlMTAzMzE0M2Y2ZmE2NTc0ZTA0YWYzNmY0N2ExY2VjMzVjOWM3YjljYTllNzBlNzcwNGRlNDUzM2FkZmY1M2Y0NWExYzdjYWM4MjYzNjE3YzMyOWFlZWU5YWY0NDA1OGI4YmE3NGE5ZDgwZjMwZDZlZDlkMTAwOTUyZGRmIiwiaGFzaF9tZXRhIjoiNTYwMjk5MDhmMjlmZmJlY2UwM2ZlNDcxMzhkOTlhZTFlY2M2MjQ4ZmFiZDg4NTllNjAzNGExYmZjZjAzNDUyNyIsInNlcW5vIjoxNTAyMDAxfSwic2VydmljZSI6eyJob3N0bmFtZSI6ImJlbmphbWluLnBpb3VmZmxlLm1lIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zMyJ9LCJjdGltZSI6MTUwNzE1NjA0OSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI5MTg5OGUyZmVmNjQ0OGNkZTVmNTFkNjc5ODdlNjFkOWY5NmI4ZmZmYmJiNTY5ZTBiZmQxOWYxY2NiNWEzNTQwIiwic2Vxbm8iOjE1LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQK1IO2v1z0u0ode9mQ9cw1FyGgq7pFhxh9+Q130NdKCyVDI+Suyn489m8mq7xq/dCTMWNrMn3XJeudbn+y3BQwyoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCACML1EkKtOKH3hDQON9m8XIX3ZbdHVr3m6svuJSYlZlaN0YWfNAgKndmVyc2lvbgE=
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgP9CFM/yiFqsLSCKQZT+Cv47WVqM+MjPdrDI4xG8PwIgKp3BheWxvYWTFA0x7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxOWE3NDFiNTk1M2UyZTkwY2VmZGVhNDA5NTcyZTU0ZWQ2ZDI5ZTE4NzBhMTUxZTdkMTZmNmRhMGJhYTdlM2Q5OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwM2ZkMDg1MzNmY2EyMTZhYjBiNDgyMjkwNjUzZjgyYmY4ZWQ2NTZhMzNlMzIzM2RkYWMzMjM4YzQ2ZjBmYzA4ODBhIiwidWlkIjoiYTY5ZTllYWM0YTIyNDM4ZmYwZDlkYzI0MmU2MzExMTkiLCJ1c2VybmFtZSI6ImJldHJlZSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUyMTA2NjEzMCwiaGFzaCI6Ijg1NmFkOTYwMWUyNGU3NWQ3ZmM4YTY5MDc2NWViNjI1MGRlMjBkNjg5Mzk0OTY4MDE4YTg1MmM4NTI1Y2ZmZDZkMjJhZDY5MmRjMmUwY2FhZjgxYTdmN2FjZjExODI5MGFkOWEzOTUzM2YzZDQ3MGM5NmExNzM5MjRjZmUzNzI4IiwiaGFzaF9tZXRhIjoiNGVjOWVkZDgwYmE3MzBlMjRiNTdlYTllMTlkYWU3OTFiYzBmYzY3NDQ4NDQ3YTUwMDBjMjQ0MWZmOWU2YzU4YiIsInNlcW5vIjoyMjM3NjQyfSwic2VydmljZSI6eyJob3N0bmFtZSI6ImJlbmphbWluLnBpb3VmZmxlLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjQ1In0sImN0aW1lIjoxNTIxMDY2MjE1LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6ImYxNWFhMGIyMDhlYjBmMmM5Mjk3OGQzOWY0YTU2MTdlY2FjNmNmZmYxMjI3NzliNjNiMzc0NDE0OWU0NDAzNzciLCJzZXFubyI6MTksInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAWErEJGGRLYPBjzhnM3MHT+eEfp7HRh6g5Eax+i4jtOr8YDagy3VzxEoYH6PXcpLIKVKwh98Fds3KgJxF1htGDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHBvpXA7k3jD07M+DA++hOJ9VSwyzv56wl8Kkr/6l8ZAo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
@@ -53,4 +53,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/betree
 
 ==================================================================
-
