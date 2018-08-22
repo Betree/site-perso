@@ -44,7 +44,7 @@ class NavBar
     menuLink.activateClick() for menuLink in @menuLinks
 
   buildMenuLinks: =>
-    $links = ($(link) for link in $('#menu').find('> li > a'))
+    $links = ($(link) for link in $('#menu').find('> li:not(.external) > a'))
     menuOffsetLeft = $links[0].offset().left
     offset_left = 0
     @menuLinks = []
