@@ -265,7 +265,7 @@ a:hover {
 
 .slide {
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-    padding-top: 8vh;
+    padding-top: 6vh;
     padding-bottom: 10vh;
     min-height: 82vh;
 }
@@ -276,7 +276,7 @@ a:hover {
 }
 
 #slide-presentation .content {
-    margin: 120px auto 0 auto;
+    margin: 80px auto 0 auto;
     background-color: whitesmoke;
     padding: 60px 65px 45px 65px;
     border-radius: 25px;
