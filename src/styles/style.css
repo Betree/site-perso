@@ -266,7 +266,7 @@ a:hover {
 .slide {
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
     padding-top: 6vh;
-    padding-bottom: 10vh;
+    padding-bottom: 12vh;
     min-height: 82vh;
 }
 
@@ -289,7 +289,7 @@ a:hover {
 }
 
 #slide-presentation {
-    background: url('../img/slide-presentation.jpg') 50% 0 no-repeat fixed;
+    background: url('../assets/img/slide-presentation.jpg') 50% 0 no-repeat fixed;
     color: #333333;
     margin: 0;
     background-size: cover;
@@ -303,7 +303,7 @@ a:hover {
 }
 
 #slide-work {
-    background: url('../img/slide-work.jpg') no-repeat fixed;
+    background: url('../assets/img/slide-work.jpg') no-repeat fixed;
     background-position-x: 55%;
     background-size: cover;
 }
@@ -334,7 +334,7 @@ a:hover {
 }
 
 #slide-projects {
-    background: url('../img/slide-projects.jpg') no-repeat fixed;
+    background: url('../assets/img/slide-projects.jpg') no-repeat fixed;
     background-size: cover;
 }
 
