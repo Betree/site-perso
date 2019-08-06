@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "repository": "",
   "scripts": {
+    "dev": "webpack-dev-server --env=development",
     "start": "webpack-dev-server --env=development",
     "build": "webpack"
   },
