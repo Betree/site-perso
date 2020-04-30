@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "expose-loader": "^0.7.5",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery.easing": "^1.4.1",
     "slicknav": "^1.0.8",
     "webpack-dev-server": "^3.1.8"
