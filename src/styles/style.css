@@ -427,12 +427,18 @@ a:hover {
   text-align: center;
 }
 
-#slide-contact .contactIcon {
-  margin: 5px;
-  height: 13%;
-  width: 13%;
-  min-height: 100px;
-  min-width: 100px;
+#slide-contact .contact-icons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 36px;
+  margin-top: 100px;
+}
+
+#slide-contact a.contactIconContainer {
+  text-decoration: none;
+  height: 120px;
+  width: 120px;
 }
 
 .row img {
