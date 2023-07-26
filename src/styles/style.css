@@ -72,7 +72,7 @@ a:hover {
 
 .content {
   margin: 0 auto;
-  width: 960px;
+  width: 860px;
 }
 
 .hidden {
@@ -142,14 +142,7 @@ a:hover {
 }
 
 #header.fixed {
-  background-color: rgb(35, 126, 173);
-  background-color: linear-gradient(
-    to right,
-    rgba(35, 127, 173, 1) 10%,
-    hsl(200, 66%, 52%) 25%,
-    rgba(35, 127, 173, 1) 79%,
-    rgba(35, 127, 173, 1) 83%
-  );
+  background-color: #79a2e0;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   -webkit-transition: background-color 0.5s, box-shadow 0.5s;
   -moz-transition: background-color 0.5s, box-shadow 0.5s;
@@ -263,8 +256,8 @@ a:hover {
 
 .experienceBlock .experienceLogo {
   float: right;
-  max-height: 85px;
-  max-width: 250px;
+  max-height: 70px;
+  max-width: 180px;
 }
 
 .experienceTitle {
@@ -274,13 +267,7 @@ a:hover {
 .experienceBlock .timePeriod {
   margin-bottom: 0.5em;
   padding: 0.25em 0.75em;
-  background-color: #237ead;
-  background-image: linear-gradient(
-    141deg,
-    #237ead 0%,
-    #428fb7 71%,
-    #4385a7 100%
-  );
+  background-color: #79a2e0;
   color: white;
   display: inline-block;
   border-radius: 5px;
@@ -301,7 +288,7 @@ a:hover {
 
 .slide {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-  padding-top: max(6vh, 75px);
+  padding-top: max(10vh, 70px);
   padding-bottom: 12vh;
   min-height: 82vh;
 }
@@ -346,9 +333,9 @@ a:hover {
 
 #slide-work .content > .description {
   background-color: whitesmoke;
-  padding: 60px 75px 45px 75px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 20px 0px #80756e /*inset*/;
+  padding: 60px 36px 45px 36px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px 0px #b4b3b1 /*inset*/;
 }
 
 #slide-skills {
@@ -358,6 +345,10 @@ a:hover {
 
 #slide-skills .description {
   text-align: center;
+}
+
+#slide-skills .col {
+  margin: 16px ; 
 }
 
 #slide-skills .skillLogo {
@@ -376,7 +367,7 @@ a:hover {
 
 #slide-projects .project {
   text-align: center;
-  border-radius: 3px;
+  border-radius: 8px;
   padding: 25px 35px;
   margin-bottom: 25px;
   box-shadow: -3px 5px 30px 0px #80756e;
@@ -393,7 +384,7 @@ a:hover {
 }
 
 #slide-projects .project.description h3 a {
-  font-size: 35px;
+  font-size: 24px;
   text-shadow: 1px 2px 3px rgba(88, 0, 0, 0.26);
   vertical-align: middle;
 }
@@ -427,12 +418,18 @@ a:hover {
   text-align: center;
 }
 
-#slide-contact .contactIcon {
-  margin: 5px;
-  height: 13%;
-  width: 13%;
-  min-height: 100px;
-  min-width: 100px;
+#slide-contact .contact-icons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 36px;
+  margin-top: 100px;
+}
+
+#slide-contact a.contactIconContainer {
+  text-decoration: none;
+  height: 120px;
+  width: 120px;
 }
 
 .row img {
