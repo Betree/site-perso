@@ -13,7 +13,7 @@ body {
 h1 {
   font-family: "Arvo", "Arial", serif;
   font-weight: normal;
-  font-size: 55px;
+  font-size: 42px;
   text-align: center;
   color: #fff;
   margin: 0;
@@ -23,10 +23,10 @@ h1 {
 h2 {
   font-family: "Arvo", "Arial", serif;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 32px;
   text-align: center;
   color: #333;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 2em 0;
   padding: 0;
   text-decoration: underline;
   text-shadow: 1px 1px 0px #abaaaa;
@@ -35,7 +35,7 @@ h2 {
 h3 {
   font-family: Arvo, "Arial", serif;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 21px;
   text-align: center;
   margin: 5px 0;
   padding: 0;
@@ -46,7 +46,7 @@ h3 {
 h4 {
   font-family: Arvo, "Arial", serif;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   margin: 5px 0;
   padding: 0;
@@ -235,8 +235,9 @@ a:hover {
 .description {
   font-family: "Goudy Bookletter 1911", serif;
   font-weight: normal;
-  font-size: 26px;
+  font-size: 20px;
   text-align: left;
+  line-height: 1.6;
 }
 
 .description iframe {
@@ -251,7 +252,7 @@ a:hover {
 }
 
 .slide .experienceBlock:not(:last-child) {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .experienceBlock .experienceLogo {
@@ -267,7 +268,7 @@ a:hover {
 .experienceBlock .timePeriod {
   margin-bottom: 0.5em;
   padding: 0.25em 0.75em;
-  background-color: #79a2e0;
+  background-color: #080808;
   color: white;
   display: inline-block;
   border-radius: 5px;
@@ -303,12 +304,13 @@ a:hover {
   background-color: whitesmoke;
   padding: 60px 65px 45px 65px;
   border-radius: 25px;
-  box-shadow: 0px 0px 20px 0px #80756e inset;
+  box-shadow: 0px 8px 20px 0px #565656;
 }
 
 #slide-presentation .description {
-  font-size: 28px;
+  font-size: 23px;
   padding: 0 16px;
+  line-height: 1.5;
 }
 
 #slide-presentation {
@@ -348,7 +350,7 @@ a:hover {
 }
 
 #slide-skills .col {
-  margin: 16px ; 
+  margin: 16px;
 }
 
 #slide-skills .skillLogo {
@@ -443,7 +445,7 @@ a:hover {
 }
 
 .col p {
-  font-size: 24px;
+  font-size: 18px;
   margin-top: 0;
 }
 
@@ -486,11 +488,144 @@ a:hover {
 }
 
 #contact_text {
-  color: #b7b7b7;
+  color: #333333;
   text-align: center;
   margin-top: 40px;
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: 0px 0px 0px #a0a0a0;
   font-family: "Arvo", "Arial", serif;
   height: 31px;
+}
+
+/**
+** MOBILE styles
+*/
+
+@media all and (max-width: 1124px) {
+  .content {
+    width: 95%;
+  }
+
+  #header .content {
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #header h1 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  #logo #profilePicture {
+    margin-top: 7px;
+    height: 55px;
+  }
+
+  #nav {
+    display: none;
+    visibility: hidden;
+  }
+
+  .slicknav_menu {
+    font-size: 19px;
+    margin-top: 18px;
+  }
+
+  #navContainer .menuScrollProgress {
+    display: none;
+  }
+
+  #responsiveMenuContainer {
+    display: block;
+  }
+
+  #slide-presentation .content {
+    padding: 3em 0;
+    width: 92%;
+    height: 100%;
+  }
+
+  #slide-projects .project.description {
+    padding: 2em 1em;
+  }
+
+  #slide-work .content > .description {
+    background: none;
+    padding: 0;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+}
+
+@media all and (max-width: 725px) {
+  .experienceBlock .experienceLogo,
+  .experienceBlock .timePeriod {
+    display: block;
+    float: none;
+    margin: 0 auto 1em;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 465px) {
+  .description {
+    font-size: 16px;
+  }
+
+  #slide-presentation {
+    padding-bottom: 0;
+  }
+
+  #slide-presentation .content {
+    width: 100%;
+    margin: 48px 0 0;
+    border-radius: 0;
+  }
+
+  #slide-projects .project.description iframe {
+    max-height: 223px;
+  }
+}
+
+@media all and (max-width: 430px) {
+  #logo #profilePicture {
+    margin-top: 9px;
+    height: 50px;
+  }
+
+  #header h1 {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  .slicknav_menu {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  .slicknav_nav {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 1124px) {
+  .slicknav_menu {
+    position: fixed;
+    top: 70px;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    left: 0;
+    border-radius: 0;
+  }
+
+  #header {
+    background-color: rgb(72, 100, 139);
+  }
+}
+
+@media all and (max-width: 230px) {
+  #logo #profilePicture {
+    display: none;
+  }
 }
