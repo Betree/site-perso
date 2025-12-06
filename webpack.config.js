@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = env => ({
   entry: './src/index.js',
-  mode: env || 'production',
+  mode: env === 'development' ? 'development' : 'production',
   externals: {
     jQuery: 'jquery',
     $: 'jquery'
@@ -25,17 +25,15 @@ module.exports = env => ({
           "css-loader"
         ]
       },
-      // Images
+      // Images - using Webpack 5 asset modules instead of url-loader
       {
         test: /\.(png|jpg|gif|svg)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8192
           }
-        ]
+        }
       }
     ]
   },
@@ -47,13 +45,21 @@ module.exports = env => ({
       filename: "[name].css",
     }),
     // copy static assets as they are required from external sources
-    new CopyWebpackPlugin(
-      [{ from: 'src/assets', to: '', toType: 'dir' }]
-    ),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'src/assets', to: '' }]
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
     })
   ],
-  devtool: env === 'development' && 'source-map'
+  devtool: env === 'development' && 'source-map',
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public')
+    },
+    compress: true,
+    port: 8080,
+    hot: true
+  }
 })
