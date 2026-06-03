@@ -1,0 +1,26 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import CategoryBadge from '../components/CategoryBadge.astro';
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../utils/blog';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} narrow>
+  <article class="prose">
+    <header class="post-header">
+      <h1>{post.data.title}</h1>
+      <p class="post-header__meta">
+        <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+        <CategoryBadge category={post.data.category} />
+      </p>
+    </header>
+    <Content />
+  </article>
+</BaseLayout>

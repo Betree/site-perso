@@ -1,0 +1,320 @@
+---
+import Card from '../Card.astro';
+
+type EducationEntry = {
+  period: string;
+  institution: string;
+  program: string;
+  location?: string;
+  logo?: { src: string; alt: string };
+  description?: string;
+  curriculum?: string[];
+  links?: { href: string; label: string }[];
+  highlights?: string[];
+};
+
+const entries: EducationEntry[] = [
+  {
+    period: 'February 2025',
+    institution: 'Hugging Face',
+    program: 'AI Agents Course',
+    location: 'Remote',
+    description:
+      'Free course on building AI agents - from fundamentals (tools, thoughts, actions, observations) to hands-on work with agent frameworks and community Spaces on the Hub.',
+    links: [
+      {
+        href: 'https://huggingface.co/learn/agents-course/unit0/introduction',
+        label: 'AI Agents Course - introduction',
+      },
+    ],
+    highlights: ['AI agents', 'smolagents', 'LangGraph', 'LlamaIndex', 'LLMs'],
+  },
+  {
+    period: '2017',
+    institution: 'Online courses',
+    program: 'MOOCs',
+    location: 'Remote',
+    links: [
+      {
+        href: 'https://www.colibris-lemouvement.org/projets/luniversite-colibris/mooc-gouvernance-partagee',
+        label: 'UDN - Organic governance (holocracy, self-sovereignty…)',
+      },
+      {
+        href: 'https://courses.edx.org/courses/course-v1:ASUx+MCO425x+2T2015/course/',
+        label: 'edX - Media literacy (Arizona State University)',
+      },
+    ],
+    highlights: ['Governance', 'Media literacy'],
+  },
+  {
+    period: 'October 2011 – August 2016',
+    institution: 'Epitech',
+    program: 'Computer science',
+    location: 'France',
+    logo: { src: '/images/about/logo_epitech.png', alt: 'Epitech' },
+    curriculum: [
+      'First year: C, UNIX systems, security, SQL',
+      'Second year: C++, Web security, network',
+      'Third year: Advanced C++, Java, business science',
+      'Fifth year: Artificial intelligence, evolution programming, personal projects',
+    ],
+  },
+  {
+    period: 'October 2014 – June 2015',
+    institution: 'California State University of Long Beach',
+    program: 'Exchange year',
+    location: 'USA',
+    logo: { src: '/images/about/logo_csulb-color.jpg', alt: 'California State University of Long Beach' },
+    curriculum: [
+      'First semester: English',
+      'Second semester: Security, Java, Operating Systems, Web Design',
+    ],
+  },
+];
+---
+
+<Card id="education">
+  <h2>Education</h2>
+
+  <div class="edu-list">
+    {
+      entries.map((entry) => (
+        <article class="edu-entry">
+          <div class="edu-entry__header">
+            <div class="edu-entry__logo-wrap">
+              {entry.logo ? (
+                <img
+                  class="edu-entry__logo"
+                  src={entry.logo.src}
+                  alt={entry.logo.alt}
+                  loading="lazy"
+                />
+              ) : (
+                <span class="edu-entry__logo-placeholder" aria-hidden="true">
+                  MOOC
+                </span>
+              )}
+            </div>
+
+            <div class="edu-entry__intro">
+              <p class="edu-entry__meta">
+                <time class="edu-entry__period">{entry.period}</time>
+                {entry.location && (
+                  <>
+                    <span class="edu-entry__meta-sep" aria-hidden="true">·</span>
+                    <span class="edu-entry__location">{entry.location}</span>
+                  </>
+                )}
+              </p>
+              <h3 class="edu-entry__title">
+                <span class="edu-entry__institution">{entry.institution}</span>
+                <span class="edu-entry__program">{entry.program}</span>
+              </h3>
+            </div>
+          </div>
+
+          {entry.description && <p class="edu-entry__description">{entry.description}</p>}
+
+          {entry.curriculum && (
+            <ul class="edu-entry__curriculum">
+              {entry.curriculum.map((line) => (
+                <li>{line}</li>
+              ))}
+            </ul>
+          )}
+
+          {entry.links && (
+            <ul class="edu-entry__links">
+              {entry.links.map((link) => (
+                <li>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {entry.highlights && (
+            <ul class="edu-entry__highlights" aria-label={`Topics at ${entry.institution}`}>
+              {entry.highlights.map((topic) => (
+                <li>
+                  <span class="badge">{topic}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </article>
+      ))
+    }
+  </div>
+</Card>
+
+<style>
+  .edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .edu-entry {
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .edu-entry:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .edu-entry__header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .edu-entry__logo-wrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+
+  .edu-entry__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .edu-entry__logo-placeholder {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .edu-entry__intro {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.125rem;
+  }
+
+  .edu-entry__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs) var(--space-sm);
+    margin: 0 0 var(--space-xs);
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+  }
+
+  .edu-entry__period,
+  .edu-entry__location {
+    margin: 0;
+  }
+
+  .edu-entry__meta-sep {
+    user-select: none;
+  }
+
+  .edu-entry__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .edu-entry__institution {
+    color: var(--color-text);
+  }
+
+  .edu-entry__program {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-muted);
+  }
+
+  .edu-entry__description,
+  .edu-entry__curriculum,
+  .edu-entry__links {
+    margin: var(--space-md) 0 0;
+    padding-left: calc(3.25rem + var(--space-md));
+    font-size: 0.9375rem;
+  }
+
+  .edu-entry__description {
+    color: var(--color-text);
+  }
+
+  .edu-entry__curriculum {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    list-style: none;
+    padding-left: calc(3.25rem + var(--space-md));
+    color: var(--color-text);
+  }
+
+  .edu-entry__curriculum li {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .edu-entry__curriculum li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--color-muted);
+    opacity: 0.6;
+  }
+
+  .edu-entry__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    list-style: none;
+  }
+
+  .edu-entry__links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+
+  .edu-entry__links a:hover {
+    text-decoration: underline;
+  }
+
+  .edu-entry__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0 0;
+    padding: 0 0 0 calc(3.25rem + var(--space-md));
+    list-style: none;
+  }
+
+  @media (max-width: 28rem) {
+    .edu-entry__description,
+    .edu-entry__curriculum,
+    .edu-entry__links,
+    .edu-entry__highlights {
+      padding-left: 0;
+    }
+  }
+</style>

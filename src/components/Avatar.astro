@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import avatarImage from '../assets/benjaminpiouffle.jpg';
+
+interface Props {
+  alt?: string;
+  class?: string;
+  width: number;
+  height: number;
+}
+
+const { alt = '', class: className, width, height } = Astro.props;
+---
+
+<Image
+  src={avatarImage}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading="eager"
+/>

@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon/components';
+import { site } from '../data/site';
+import { socialIconName } from '../data/socialIcons';
+
+const emailIcon = socialIconName('Email');
+---
+
+<ul class="social-links">
+  <li>
+    <a href={`mailto:${site.email}`}>
+      {emailIcon && <Icon name={emailIcon} aria-hidden="true" />}
+      Email
+    </a>
+  </li>
+  {
+    site.social.map((link) => {
+      const iconName = socialIconName(link.label);
+      return (
+        <li>
+          <a href={link.href} rel="me noopener noreferrer" target="_blank">
+            {iconName && <Icon name={iconName} aria-hidden="true" />}
+            {link.label}
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>
