@@ -596,3 +596,7 @@ ol {
 .mt-16 {
   margin-top: 4rem;
 }
+
+.strong {
+  font-weight: 600;
+}
