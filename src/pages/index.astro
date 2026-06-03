@@ -16,28 +16,47 @@ const latestPosts = sortPostsByDate(allPosts).slice(0, 5);
   <div class="page-cards">
     <Card class="intro">
       <div class="intro__header">
-        <Avatar
-          class="intro__image"
-          alt="Benjamin Piouffle"
-          width={48}
-          height={48}
-        />
-        <h1>{site.title}</h1>
+        <h1>About me</h1>
       </div>
-      <p>{site.introLead}</p>
+      <p class="mt-6">
+        My name is <strong>Benjamin Piouffle</strong>. I grew up believing that technology could be
+        genuinely collaborative, that knowledge could be shared freely across borders by anyone who
+        cared enough to contribute. That optimism hasn't fully survived contact with the modern
+        internet which, somewhere along the way, became mostly a machine for selling things and harvesting
+        attention.
+      </p>
       <p>
-        I am currently working full-time as a CTO for the Open Finance Consortium, a nonprofit
-        developing <a href="https://opencollective.com" target="_blank" rel="noopener noreferrer"
+        I care about the other side of that equation: open-source software, cooperative platforms,
+        digital tools that actually empower the people who use them. If we're stuck with this timeline,
+        we may as well find the cracks and see what else can be built with these tools.
+      </p>
+      <p>
+        Day to day, I work as CTO of the Open Finance Consortium, a nonprofit behind{" "}
+        <a href="https://opencollective.com" target="_blank" rel="noopener noreferrer"
           >Open Collective</a
-        >, an open-source platform that helps communities achieve financial sustainability.
+        > - an open-source platform built on a simple but underused idea: money flows should be
+        transparent. Most large nonprofits and public institutions don't operate that way. We do.
+        <br/>
+        It's a small team with a wide scope and a lot of responsibility. My days span engineering,
+        product, security, and the eternal challenge of getting humans to agree on how to build things.
       </p>
       <p>
-        I am also the founder of <a href="https://captainfact.io" target="_blank" rel="noopener noreferrer"
-          >CaptainFact</a
-        >, a French nonprofit organization developing open-source and collaborative, real-time
-        fact-checking tools for citizens, media organizations, and educational institutions.
+        I'm also the founder of{" "}
+        <a href="https://captainfact.io" target="_blank" rel="noopener noreferrer">CaptainFact</a
+        >, a French nonprofit that came out of the rising tide of misinformation, and a conviction
+        that the answer wasn't more top-down gatekeepers. I wanted something more horizontal: tools that let
+        citizens verify claims together, in real time. The
+        platform is still used, though it has more potential than it has had time to fulfill. What
+        surprised me along the way is where the real impact seems to live: the association now runs
+        critical thinking and media literacy workshops in schools, and I've come to believe that
+        teaching young people how to evaluate sources might matter more than any tool I could ship.
       </p>
-      <p><strong>{site.introNotAvailable}</strong></p>
+      <h2>About this site</h2>
+      <p>
+        This site exists for two things: presenting my work, and having a place to write. Not a
+        newsletter, not a platform, just a personal corner of the internet to share ideas, things
+        I've learned, and whatever I find worth putting into words.
+      </p>
     </Card>
 
     <a class="cta" href="/about#about">

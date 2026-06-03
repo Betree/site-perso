@@ -11,6 +11,4 @@ export const site = {
     { label: 'Mastodon', href: 'https://framapiaf.org/@Betree' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/benjaminpiouffle' },
   ],
-  introLead: `My name is Benjamin Piouffle, I'm a fullstack developer who graduated from the French engineering school Epitech. I also studied for one year at the California State University of Long Beach (USA).`,
-  introNotAvailable: 'I am not available for hire.',
 } as const;
