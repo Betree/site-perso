@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import CategoryBadge from './CategoryBadge.astro';
+import { formatDate, getPostSlug } from '../utils/blog';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const slug = getPostSlug(post);
+---
+
+<li>
+  <p class="post-list__meta">
+    <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+    <CategoryBadge category={post.data.category} />
+  </p>
+  <h3 class="post-list__title">
+    <a href={`/blog/${slug}/`}>{post.data.title}</a>
+  </h3>
+  {post.data.description && <p class="post-list__desc">{post.data.description}</p>}
+</li>

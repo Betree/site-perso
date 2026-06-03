@@ -1,0 +1,11 @@
+---
+import { formatCategory } from '../utils/blog';
+
+interface Props {
+  category: string;
+}
+
+const { category } = Astro.props;
+---
+
+<span class="badge">{formatCategory(category)}</span>
