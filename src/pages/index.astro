@@ -1,14 +1,12 @@
 ---
-import { getCollection } from 'astro:content';
-import Avatar from '../components/Avatar.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Card from '../components/Card.astro';
-import PostCard from '../components/PostCard.astro';
-import SocialLinks from '../components/SocialLinks.astro';
-import { site } from '../data/site';
-import { sortPostsByDate } from '../utils/blog';
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+import PostCard from "../components/PostCard.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import { sortPostsByDate } from "../utils/blog";
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const latestPosts = sortPostsByDate(allPosts).slice(0, 5);
 ---
 
@@ -18,51 +16,65 @@ const latestPosts = sortPostsByDate(allPosts).slice(0, 5);
       <div class="intro__header">
         <h1>About me</h1>
       </div>
+
       <p class="mt-6">
-        My name is <strong>Benjamin Piouffle</strong>. I grew up believing that technology could be
-        genuinely collaborative, that knowledge could be shared freely across borders by anyone who
-        cared enough to contribute. That optimism hasn't fully survived contact with the modern
-        internet which, somewhere along the way, became mostly a machine for selling things and harvesting
+        My name is <strong>Benjamin Piouffle</strong>. I grew up believing
+        technology could be collaborative, that knowledge was meant to be shared
+        freely across borders by anyone who cared to contribute. That optimism
+        hasn't fully survived contact with the modern internet which, somewhere
+        along the way, became mostly a machine for selling things and harvesting
         attention.
       </p>
       <p>
-        I care about the other side of that equation: open-source software, cooperative platforms,
-        digital tools that actually empower the people who use them. If we're stuck with this timeline,
-        we may as well find the cracks and see what else can be built with these tools.
+        I still care about the other side of that equation: open-source
+        software, cooperative platforms, digital tools that actually empower the
+        people who use them. If we're stuck with this timeline, we may as well
+        find the cracks, see what else can be built with them.
       </p>
       <p>
-        Day to day, I work as CTO of the Open Finance Consortium, a nonprofit behind{" "}
-        <a href="https://opencollective.com" target="_blank" rel="noopener noreferrer"
-          >Open Collective</a
-        > - an open-source platform built on a simple but underused idea: money flows should be
-        transparent. Most large nonprofits and public institutions don't operate that way. We do.
-        <br/>
-        It's a small team with a wide scope and a lot of responsibility. My days span engineering,
-        product, security, and the eternal challenge of getting humans to agree on how to build things.
+        Day to day, I work as CTO of the Open Finance Consortium, the non-profit
+        behind{" "}
+        <a
+          href="https://opencollective.com"
+          target="_blank"
+          rel="noopener noreferrer">Open Collective</a
+        >, an open-source platform built on a simple idea: money flows (<i
+          >especially in the context of non-profits and public institutions</i
+        >) should be transparent by default. My days are spent between
+        engineering, product, security, and the eternal challenge of getting
+        humans to agree on how to build things.
       </p>
       <p>
         I'm also the founder of{" "}
-        <a href="https://captainfact.io" target="_blank" rel="noopener noreferrer">CaptainFact</a
-        >, a French nonprofit that came out of the rising tide of misinformation, and a conviction
-        that the answer wasn't more top-down gatekeepers. I wanted something more horizontal: tools that let
-        citizens verify claims together, in real time. The
-        platform is still used, though it has more potential than it has had time to fulfill. What
-        surprised me along the way is where the real impact seems to live: the association now runs
-        critical thinking and media literacy workshops in schools, and I've come to believe that
-        teaching young people how to evaluate sources might matter more than any tool I could ship.
+        <a
+          href="https://captainfact.io"
+          target="_blank"
+          rel="noopener noreferrer">CaptainFact</a
+        >, a project born from the conviction that the answer to misinformation
+        wasn't more top-down gatekeepers, but rather tools that let citizens
+        verify claims together. Though not very active anymore, the platform is
+        still live. The association behind it has also evolved, now running
+        critical thinking and media literacy workshops in schools.
       </p>
       <p class="strong">About this site</p>
       <p>
-        This site exists for two things: presenting my work, and having a place to write. Not a
-        newsletter, not a platform, just a personal corner of the internet to share ideas, things
-        I've learned, and whatever I find worth putting into words.
-        Oh, and it has <a href="/rss.xml">RSS feed</a> too.
+        This site is for presenting my work and having a place to write, a
+        personal corner of the internet like in the good old days. Oh, and it
+        has an <a href="/rss.xml">RSS feed</a> too.
       </p>
     </Card>
 
     <a class="cta" href="/about#about">
       More about my work
-      <svg class="cta__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <svg
+        class="cta__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        aria-hidden="true"
+      >
         <path
           d="M4 10h12M11 5l5 5-5 5"
           stroke="currentColor"
@@ -76,11 +88,13 @@ const latestPosts = sortPostsByDate(allPosts).slice(0, 5);
       <ul class="post-list">
         {latestPosts.map((post) => <PostCard post={post} />)}
       </ul>
-      {latestPosts.length > 0 && (
-        <p class="mt-3">
-          <a href="/blog/">View all posts</a>
-        </p>
-      )}
+      {
+        latestPosts.length > 0 && (
+          <p class="mt-3">
+            <a href="/blog/">View all posts</a>
+          </p>
+        )
+      }
     </Card>
 
     <Card title="Connect">
