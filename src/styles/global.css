@@ -225,6 +225,12 @@ ol {
   width: 100%;
 }
 
+@media (max-width: 40rem) {
+  .site-main {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
 .site-main--narrow {
   max-width: var(--max-width);
 }
