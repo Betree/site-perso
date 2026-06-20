@@ -16,7 +16,7 @@
     "@iconify-json/circle-flags": "^1.2.10",
     "@iconify-json/lucide": "^1.2.111",
     "@iconify-json/simple-icons": "^1.2.85",
-    "astro": "^6.4.3",
+    "astro": "^6.4.6",
     "astro-icon": "^1.1.5"
   }
 }
