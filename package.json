@@ -9,7 +9,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
@@ -17,6 +20,13 @@
     "@iconify-json/lucide": "^1.2.111",
     "@iconify-json/simple-icons": "^1.2.85",
     "astro": "^6.4.3",
-    "astro-icon": "^1.1.5"
+    "astro-icon": "^1.1.5",
+    "cheerio": "^1.2.0",
+    "rehype-external-links": "^3.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
   }
 }
