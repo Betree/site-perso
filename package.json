@@ -15,11 +15,12 @@
     "check": "astro check"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.18",
+    "@astrojs/markdown-remark": "^7.2.1",
+    "@astrojs/rss": "^4.0.19",
     "@iconify-json/circle-flags": "^1.2.10",
-    "@iconify-json/lucide": "^1.2.111",
-    "@iconify-json/simple-icons": "^1.2.85",
-    "astro": "^6.4.3",
+    "@iconify-json/lucide": "^1.2.116",
+    "@iconify-json/simple-icons": "^1.2.89",
+    "astro": "^7.0.7",
     "astro-icon": "^1.1.5",
     "cheerio": "^1.2.0",
     "rehype-external-links": "^3.0.0"
@@ -27,6 +28,6 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "typescript": "^6.0.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.10"
   }
 }

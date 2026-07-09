@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import icon from 'astro-icon';
 import rehypeExternalLinks from 'rehype-external-links';
 import { legacyBlogRedirects } from './src/data/blogRedirects.ts';
@@ -9,16 +10,18 @@ export default defineConfig({
   site: 'https://benjamin.piouffle.com',
   redirects: legacyBlogRedirects(),
   markdown: {
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          target: '_blank',
-          rel: ['noopener', 'noreferrer'],
-          properties: { class: 'external-link' },
-        },
+    processor: unified({
+      rehypePlugins: [
+        [
+          rehypeExternalLinks,
+          {
+            target: '_blank',
+            rel: ['noopener', 'noreferrer'],
+            properties: { class: 'external-link' },
+          },
+        ],
       ],
-    ],
+    }),
   },
   integrations: [
     icon({

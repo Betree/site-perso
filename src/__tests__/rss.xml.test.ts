@@ -73,7 +73,7 @@ vi.mock('astro:content', () => ({
 
 vi.mock('astro:assets', () => ({
   getImage: (...args: unknown[]) => mockGetImage(...args),
-})); 
+}));
 
 vi.mock('astro/container', () => ({
   experimental_AstroContainer: {
@@ -95,7 +95,7 @@ vi.mock('../assets/benjaminpiouffle.jpg', () => ({
   },
 }));
 
-const { GET } = await import('./rss.xml');
+const { GET } = await import('../pages/rss.xml');
 
 function createPost(overrides: {
   id: string;
