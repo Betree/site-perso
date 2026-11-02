@@ -7,7 +7,7 @@ import SocialLinks from "../components/SocialLinks.astro";
 import { sortPostsByDate } from "../utils/blog";
 
 const allPosts = await getCollection("blog", ({ data }) => !data.draft);
-const latestPosts = sortPostsByDate(allPosts).slice(0, 5);
+const latestPosts = sortPostsByDate(allPosts).slice(0, 3);
 ---
 
 <BaseLayout narrow>
@@ -18,47 +18,31 @@ const latestPosts = sortPostsByDate(allPosts).slice(0, 5);
       </div>
 
       <p class="mt-6">
-        My name is <strong>Benjamin Piouffle</strong>. I grew up believing
-        technology could be collaborative, that knowledge was meant to be shared
-        freely across borders by anyone who cared to contribute.
+        My name is <strong>Benjamin Piouffle</strong>. I'm a software engineer,
+        and I've spent most of my career on open source software.
       </p>
       <p>
-        The modern internet (or at least its most mainstream incarnations) didn't
-        really follow that vision; it mostly became a machine for selling things
-        and capturing attention. But there's still another side to it:
-        open-source software, cooperative platforms, tools built to actually
-        empower the people using them. That's where I like to spend my time.
-      </p>
-      <p>
-        Day to day, I work as CTO of the Open Finance Consortium, the non-profit
-        behind{" "}
+        Since 2018, I've worked on{" "}
         <a
           href="https://opencollective.com"
           target="_blank"
           rel="noopener noreferrer">Open Collective</a
-        >, an open-source platform built on a simple idea: money flows (<i
-          >especially in the context of non-profits and public institutions</i
-        >) should be transparent by default. My days are spent between
-        engineering, product, security, and the eternal challenge of getting
-        humans to agree on how to build things.
+        >, a platform that lets communities and open source projects raise
+        money and spend it in the open, so anyone can see where it goes. These
+        days I lead engineering, product and security for the non-profit that
+        runs it.
       </p>
       <p>
-        I'm also the founder of{" "}
+        In 2016, I founded{" "}
         <a
           href="https://captainfact.io"
           target="_blank"
           rel="noopener noreferrer">CaptainFact</a
-        >, a project born from the conviction that the answer to misinformation
-        wasn't more top-down gatekeepers, but rather tools that let citizens
-        verify claims together. Though not very active anymore, the platform is
-        still live. The association behind it has also evolved, now running
-        critical thinking and media literacy workshops in schools.
-      </p>
-      <p class="strong">About this site</p>
-      <p>
-        This site is for presenting my work and having a place to write, a
-        personal corner of the internet like in the good old days. Oh, and it
-        has an <a href="/rss.xml">RSS feed</a> too.
+        >, a platform where anyone could fact-check YouTube videos with others,
+        even during a live stream. Its community ended up checking presidential
+        debates as they aired, which even the big newsrooms couldn't manage at
+        the time. It ran for ten years, and it was a great human experiment as
+        well as a strong piece of technology.
       </p>
     </Card>
 
