@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutNav from '../components/about/AboutNav.astro';
+import AboutSection from '../components/about/AboutSection.astro';
+import ContactSection from '../components/about/ContactSection.astro';
+import EducationSection from '../components/about/EducationSection.astro';
+import SkillsSection from '../components/about/SkillsSection.astro';
+import WorkSection from '../components/about/WorkSection.astro';
+import { aboutSections, SECTION_IDS } from '../data/aboutSections';
+import { site } from '../data/site';
+
+const sectionComponents = {
+  about: AboutSection,
+  work: WorkSection,
+  skills: SkillsSection,
+  education: EducationSection,
+  contact: ContactSection,
+} as const;
+---
+
+<BaseLayout title="About" description={`About ${site.author}`}>
+  <div class="about-layout">
+    <AboutNav sections={aboutSections} />
+
+    <div class="page-cards">
+      {
+        aboutSections.map(({ id }) => {
+          const Section = sectionComponents[id];
+          return <Section />;
+        })
+      }
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ sectionIds: SECTION_IDS }}>
+  const layout = document.querySelector('.about-layout');
+  const navWrap = document.querySelector('.about-nav-wrap');
+  const navSentinel = document.querySelector('.about-nav-sentinel');
+  const navLinks = document.querySelectorAll('.about-nav a[href^="#"]');
+  const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+  function getScrollOffset() {
+    if (!layout) return 85;
+    const value = getComputedStyle(layout).getPropertyValue('--about-scroll-offset').trim();
+    return Number.parseFloat(value) || 85;
+  }
+
+  /** Top of the section’s scroll target (border box minus scroll-margin-top). */
+  function getSectionScrollStart(section) {
+    const marginTop = Number.parseFloat(getComputedStyle(section).scrollMarginTop) || getScrollOffset();
+    return section.getBoundingClientRect().top - marginTop;
+  }
+
+  if (navWrap && navSentinel) {
+    const stickyObserver = new IntersectionObserver(
+      ([entry]) => navWrap.classList.toggle('is-stuck', !entry.isIntersecting),
+      { threshold: 0 },
+    );
+    stickyObserver.observe(navSentinel);
+  }
+
+  function setActiveSection(id) {
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActiveSection() {
+    const offset = getScrollOffset();
+    let activeId = sectionIds[0];
+
+    for (const id of sectionIds) {
+      const section = document.getElementById(id);
+      if (section && getSectionScrollStart(section) <= offset) {
+        activeId = id;
+      }
+    }
+
+    const doc = document.documentElement;
+    if (window.innerHeight + window.scrollY >= doc.scrollHeight - 1) {
+      activeId = sectionIds[sectionIds.length - 1];
+    }
+
+    setActiveSection(activeId);
+  }
+
+  if (sections.length && navLinks.length) {
+    const offset = getScrollOffset();
+    const sectionObserver = new IntersectionObserver(
+      () => updateActiveSection(),
+      {
+        rootMargin: `-${offset}px 0px -70% 0px`,
+        threshold: 0,
+      },
+    );
+
+    sections.forEach((section) => sectionObserver.observe(section));
+    updateActiveSection();
+
+    let scrollRaf = 0;
+    window.addEventListener(
+      'scroll',
+      () => {
+        cancelAnimationFrame(scrollRaf);
+        scrollRaf = requestAnimationFrame(updateActiveSection);
+      },
+      { passive: true },
+    );
+    window.addEventListener('scrollend', updateActiveSection);
+    window.addEventListener('hashchange', updateActiveSection);
+  }
+</script>

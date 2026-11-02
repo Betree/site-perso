@@ -1,0 +1,86 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+import PostCard from "../components/PostCard.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import { sortPostsByDate } from "../utils/blog";
+
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const latestPosts = sortPostsByDate(allPosts).slice(0, 3);
+---
+
+<BaseLayout narrow>
+  <div class="page-cards">
+    <Card class="intro">
+      <div class="intro__header">
+        <h1>About me</h1>
+      </div>
+
+      <p class="mt-6">
+        My name is <strong>Benjamin Piouffle</strong>. I'm a software engineer,
+        and I've spent most of my career on open source software.
+      </p>
+      <p>
+        Since 2018, I've worked on{" "}
+        <a
+          href="https://opencollective.com"
+          target="_blank"
+          rel="noopener noreferrer">Open Collective</a
+        >, a platform that lets communities and open source projects raise
+        money and spend it in the open, so anyone can see where it goes. These
+        days I lead engineering, product and security for the non-profit that
+        runs it, and I still write code.
+      </p>
+      <p>
+        In 2016, I founded{" "}
+        <a
+          href="https://captainfact.io"
+          target="_blank"
+          rel="noopener noreferrer">CaptainFact</a
+        >, a platform where anyone could fact-check YouTube videos with others,
+        even during a live stream. Its community ended up checking presidential
+        debates as they aired, which even the big newsrooms couldn't manage at
+        the time. It ran for ten years, and it was a great human experiment as
+        well as a strong piece of technology.
+      </p>
+    </Card>
+
+    <a class="cta" href="/about#about">
+      More about my work
+      <svg
+        class="cta__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h12M11 5l5 5-5 5"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+
+    <Card title="Latest posts">
+      <ul class="post-list">
+        {latestPosts.map((post) => <PostCard post={post} />)}
+      </ul>
+      {
+        latestPosts.length > 0 && (
+          <p class="mt-3">
+            <a href="/blog/">View all posts</a>
+          </p>
+        )
+      }
+    </Card>
+
+    <Card title="Connect">
+      <SocialLinks />
+    </Card>
+  </div>
+</BaseLayout>

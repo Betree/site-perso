@@ -1,16 +1,28 @@
-# Brunch app
+# Benjamin Piouffle
 
-This is a HTML5 application, built with [Brunch](http://brunch.io).
+Personal website for [Benjamin Piouffle](https://benjamin.piouffle.com).
 
-## Getting started
-* Install (if you don't have them):
-    * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * Brunch plugins and app dependencies: `npm install`
-* Run:
-    * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `npm run build` — builds minified project for production
-* Learn:
-    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:4321](http://localhost:4321).
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Content
+
+- **Blog posts:** `src/content/blog/` (Markdown + co-located images)
+- **Site copy & links:** `src/data/site.ts`
+
+## Deploy
+
+Static output is in `dist/`. `public/CNAME` targets GitHub Pages. `public/_redirects` provides Netlify/Cloudflare 301 rules for legacy blog paths.

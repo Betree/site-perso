@@ -1,0 +1,20 @@
+---
+import type { aboutSections } from '../../data/aboutSections';
+
+interface Props {
+  sections: typeof aboutSections;
+}
+
+const { sections } = Astro.props;
+---
+
+<div class="about-nav-sentinel" aria-hidden="true"></div>
+<div class="about-nav-wrap card">
+  <nav class="about-nav" id="about-page-nav" aria-label="About sections">
+    {
+      sections.map(({ id, label }) => (
+        <a href={`#${id}`}>{label}</a>
+      ))
+    }
+  </nav>
+</div>

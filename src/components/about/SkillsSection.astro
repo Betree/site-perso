@@ -1,0 +1,150 @@
+---
+import { Icon } from 'astro-icon/components';
+import Card from '../Card.astro';
+import { techIconName } from '../../data/techIcons';
+import { skillIconName } from '../../data/skillIcons';
+
+const techGroups = [
+  {
+    label: 'Software programming',
+    items: ['Elixir', 'Python', 'TypeScript'],
+  },
+  {
+    label: 'Operating systems / Platforms',
+    items: ['GNU/Linux', 'Arduino'],
+  },
+  {
+    label: 'Databases & query languages',
+    items: ['PostgreSQL', 'GraphQL'],
+  },
+  {
+    label: 'Web programming',
+    items: ['Phoenix Framework', 'React'],
+  },
+  {
+    label: 'Tools',
+    items: ['Git', 'Docker'],
+  },
+];
+
+const languages = ['French (native)', 'English (fluent)', 'Italian (basic)'];
+
+const otherSkills = [
+  'Rock Climbing',
+  'Flamenco Guitar',
+  'Holacracy',
+];
+---
+
+<Card id="skills">
+  <h2>Skills</h2>
+
+  <section class="skills-block" aria-labelledby="skills-tech-heading">
+    <h3 id="skills-tech-heading">Favorite Technologies</h3>
+    <div class="skills-grid">
+      {
+        techGroups.map((group) => (
+          <div class="skill-group">
+            <h4>{group.label}</h4>
+            <ul class="skill-group__items" aria-label={group.label}>
+              {group.items.map((item) => {
+                const iconName = techIconName(item);
+                return (
+                  <li>
+                    <span class="badge badge--with-icon">
+                      {iconName && <Icon name={iconName} aria-hidden="true" />}
+                      {item}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="skills-block" aria-labelledby="skills-lang-heading">
+    <h3 id="skills-lang-heading">Languages</h3>
+    <ul class="skills-inline" aria-label="Spoken languages">
+      {
+        languages.map((lang) => {
+          const iconName = skillIconName(lang);
+          return (
+            <li>
+              <span class="badge badge--with-icon">
+                {iconName && <Icon name={iconName} aria-hidden="true" />}
+                {lang}
+              </span>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+
+  <section class="skills-block skills-block--last" aria-labelledby="skills-other-heading">
+    <h3 id="skills-other-heading">Others</h3>
+    <ul class="skills-inline" aria-label="Other skills">
+      {
+        otherSkills.map((skill) => {
+          const iconName = skillIconName(skill);
+          return (
+            <li>
+              <span class="badge badge--with-icon">
+                {iconName && <Icon name={iconName} aria-hidden="true" />}
+                {skill}
+              </span>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</Card>
+
+<style>
+  .skills-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .skills-block--last {
+    margin-bottom: 0;
+  }
+
+  .skills-block h3 {
+    margin: 0 0 var(--space-md);
+    font-size: 1.0625rem;
+    font-weight: 600;
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: var(--space-md) var(--space-lg);
+  }
+
+  @media (min-width: 36rem) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .skill-group h4 {
+    margin: 0 0 var(--space-sm);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-muted);
+  }
+
+  .skill-group__items,
+  .skills-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+</style>
