@@ -20,7 +20,7 @@
     "@iconify-json/circle-flags": "^1.2.14",
     "@iconify-json/lucide": "^1.2.150",
     "@iconify-json/simple-icons": "^1.2.101",
-    "astro": "^7.4.5",
+    "astro": "^7.4.7",
     "astro-icon": "^1.2.0",
     "cheerio": "^1.2.0",
     "rehype-external-links": "^3.0.0"
